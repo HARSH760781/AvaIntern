@@ -6,6 +6,7 @@ var logger = require("morgan");
 var hbs = require("hbs");
 
 var app = express();
+const port = process.env.PORT || 3000;
 
 const templatePath = path.join(__dirname, "./templates/views");
 const partialsPath = path.join(__dirname, "./templates/partials");
@@ -81,6 +82,6 @@ app.get("/signup", (req, res) => {
   res.render("signup");
 });
 
-app.listen(80, () => {
+app.listen(port, () => {
   console.log("Connection running");
 });
