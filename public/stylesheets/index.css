@@ -45,6 +45,7 @@
 }
 .btn{
     font-size: 15px;
+    width: 90px;
 }
 .btn a {
     text-decoration: none;
@@ -66,8 +67,16 @@
     display: flex;
     margin: 3% 0;
 }
+.someextra{
+    width: 80%;
+    text-align: center;
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+}
 .card{
     margin: auto;
+    width: 900px;
 }
 
 .card-img-top{
@@ -299,12 +308,9 @@ padding: 60px 0;
 }
 .course-details{
     background: rgb(244, 234, 244);
-    /* width: 5=0%; */
     padding-left: 20px;
     margin: 5% 10% ;
-    /* text-align: center; */
     font-size: 40px;
-    font-style: oblique;
     font-family: robo;
     font-weight: bold;
 }
@@ -364,4 +370,217 @@ border-radius: 20px;
     text-align: start;
     font-family: 'Mochiy Pop P One', sans-serif;
     font-size: x-large;
+}
+.component-extra h1{
+    font-size: 80px;
+    color:rgb(216, 199, 68)
+
+}
+.navbar{
+    width: 100%;
+}
+
+.ourmentor p{
+    width:80%;margin:auto;font-size:30px;font-weight:bold
+}
+.info-3 .btn{
+    width: 25%;
+    border-radius: 20px;
+}
+.blog .cards .card{
+    width: 18rem;
+}
+.multiple-cards .cards .cards{
+    width: 18rem;
+}
+.content .btn
+{
+    width: 25%;
+    height: 50px;
+    border-radius: 20px;
+}
+
+
+
+/* Responsive index.hbs */
+@media only screen and (max-width:1075px){
+.component-extra h1{
+    font-size: 40px;
+}
+.container-fluid{
+    width: 100%;
+}
+.thought-author q{
+    font-size: 20px;
+}
+.content{
+    font-size: 35px;
+    margin:0;
+    padding: 5px;
+}
+.container img{
+    width: 20rem;
+}
+.ourmentor b{
+    font-size: 40px;
+}
+.ourmentor p{
+    font-size: 20px;
+}
+}
+@media only screen and (max-width:991px)
+{
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .container .img{
+        width: 100%;
+    }
+    .container .img img{
+        width: 100%;
+    }
+    .container .content{
+        width: 100%;
+    }
+    .recent-info, .info-1{
+        justify-content: center;
+        text-align: center;
+    }
+    .component{
+        font-size: 13px;
+    }
+    .info-3 .btn{
+        width: 40%;
+    }
+    footer h1{
+        font-size:20px ;
+    }
+}
+@media only screen and (max-width:815px) {
+    .cards{
+        display: flex;
+        flex-direction: row;
+    }
+    .multiple-cards{
+        display: flex;
+    }
+    .multiple-cards .cards{
+        flex-direction: column;
+    }
+    .multiple-cards .cards .card{
+        margin: 10px 0;
+        width: 90%;
+    }
+    .extra{
+        display: flex;
+        flex-direction: column;
+    }
+    .extra .img{
+        width: 100%;
+    }
+    .extra .info-3{
+        width: 100%;
+        text-align: center;
+    }
+    .blog .cards{
+        display: flex;
+        flex-direction: column;
+    }
+    .blog .cards .card{
+        width: 50%;
+        margin: 10px auto;
+        text-align: center;
+        justify-content: center;
+    }
+    .blog .cards .card img{
+        height: 300px;
+    }
+
+    .ourmentor p{
+        font-size: 15px;
+    }
+    footer h1{
+        font-size:20px ;
+    }
+}
+@media only screen and (max-width:652px){
+    .content{
+        font-size: 20px;
+    }
+    .basic-info{
+        font-size: 20px;
+    }
+    .our_courses{
+        width: 95%;
+    }
+    .multiple-cards{
+        width: 100%;
+    }
+    .multiple-cards .cards .card{
+        width: 100%;
+    }
+    .thoughts{
+        display: flex;
+        flex-direction: column;
+    }
+    .author{
+        width: 100%;
+    }
+    .thought-author{
+        width: 100%;
+    }
+    .component-extra h4{
+        font-size: 12px;
+    }
+    .component-extra b{
+        font-size: 23px;
+    }
+    footer .component{
+        font-size:8px ;
+    }
+}
+@media only screen and (max-width:438px)
+{
+    .multiple-cards{
+        flex-direction: column;
+    }
+    .multiple-cards .cards{
+        width: 70%;
+        margin: auto;
+    }
+    .content .btn{
+        width: 30%;
+    }
+    .content b{
+        font-size: 15px;
+    }
+    .blog .cards .card{
+        width: 80%;
+        margin: auto;
+    }
+}
+@media only screen and (max-width:331px){
+    .content .btn{
+        width: 35%;
+        height: 54px;
+        border-radius: 20px;
+        font-size: 7px;
+    }
+    .basic-info{
+        font-size: 15px;
+    }
+    .component-extra h4{
+        font-size: 10px;
+    }
+    footer .component{
+        display: flex;
+        flex-direction: column;
+    }
+    .c1,.c2,.c3,.c4{
+        width: 80%;
+        text-align: center;
+        margin: 10px auto;
+      }
+
 }

@@ -82,6 +82,6 @@ app.get("/signup", (req, res) => {
   res.render("signup");
 });
 
-app.listen(port, () => {
+app.listen(8080, () => {
   console.log("Connection running");
 });
