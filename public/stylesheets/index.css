@@ -5,9 +5,13 @@
 *{
     margin: 0;padding: 0;
 }
+.bg-body-tertiary{
+    background-color: white;
+    --bs-bg-opacity: -1;
+}
 .navbar-brand{
     font-family: 'Rubik Pixels', cursive;
-    color: red;
+    color: yellow
 }
 .container-fluid{
     width: 85%;
@@ -127,7 +131,9 @@ padding: 60px 0;
 .info-3{
     margin-top: 10%;
     width:  40%;
-    font-family:cursive;
+    font-weight: bold;
+}
+.info-3 h2{
     font-weight: bold;
 }
 .blog{
@@ -161,7 +167,7 @@ padding: 60px 0;
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
+    background-color: #f3e6e6;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -171,7 +177,7 @@ padding: 60px 0;
     position: absolute;
     top: 0%;
     left: 100%;
-    background-color:rgb(243, 238, 235);
+    background-color:whitesmoke;
         width: 170%;
         padding: 10px;
 }
@@ -181,10 +187,10 @@ padding: 60px 0;
     color: black;
     font-size: 20px;
 }
-.dropdown-content-1 a:hover{
+.dropdown-1 .dropdown-content-1 a:hover{
     transform: scale(1.2,1.2);
     font-size: 21px;
-    color: rgb(251, 32, 32);
+    color: red;
 }
 .dropdown-content-1 a img{
     width: 30px;
@@ -229,7 +235,26 @@ padding: 60px 0;
         width: 40%;
         font-size: 20px;
     }
+    .nav-item a:hover{
+        color:rgba(255, 247, 7, 0.986);
+        font-weight: bolder;
+    }
+    .about{
+        width: 80%;
+margin: 10% auto;
+    }
+    .about hr{
+        width: 50%;
+    }
+    .about h1{
+        font-size: 80px;
+    }
+    .about li{
+        margin: 5% 5px;
+        font-size: 30px;
+text-align: start;
 
+    }
     /* About */
     .banner{
         width: 80%;
@@ -404,8 +429,8 @@ background: rgb(240, 228, 240);
   }
   .whychooseus img{
     width: 35%;
-border-radius: 5%;  
-height: 29rem;
+    border-radius: 5%;  
+    height: 35rem;
   }
   .moto{
     width: 40%;
@@ -534,9 +559,19 @@ border-radius: 20px;
     margin: auto;
     flex-direction: column;
 }
+.whychooseus img {
+    width: 100%;
+    height: 35rem;
+  }
+.about h1{
+    font-size: 30px;
+}
+.about li{
+    font-size: 20px;
+}
 .whychooseus img{
     width: 100%;
-    height: 20rem;
+    height: 30rem;
 }
 .moto{
     width: 100%;
@@ -569,11 +604,19 @@ border-radius: 20px;
     font-size: 20px;
 }
 }
-@media only screen and (max-width:991px)
+@media only screen and (max-width:992px)
 {
     .container {
         display: flex;
         flex-direction: column;
+    }
+    .navbar-nav{
+        /* width: 47; */
+        background-color:white;
+    }
+    .dropdown-content{
+        left: 0%;
+        top: 0%;
     }
     .container .img{
         width: 100%;
@@ -660,6 +703,12 @@ border-radius: 20px;
         font-size: 20px;
     }
 
+    .about h1{
+        font-size: 25px;
+    }
+    .about li{
+        font-size: 15px;
+    }
     .provide-content {
         width: 100%;
         display: flex;
@@ -712,11 +761,34 @@ border-radius: 20px;
     footer .component{
         font-size:8px ;
     }
+    .dropdown-content-1 a{
+        font-size: 15px;
+        font-weight: none;
+    }
+    .c1{
+        min-width: 25%;
+    }
 }
 @media only screen and (max-width:438px)
 {
     .multiple-cards{
         flex-direction: column;
+    }
+    .dropdown-content-1{
+        font-size: 15px;
+        padding: 5px;
+        margin: 1px;
+        width: 135%;
+      }
+    .dropdown-content-1 a{
+        font-size: 12px;
+    }
+    .dropbtn{
+        width: 60%;
+    }
+    .dropdown-content-1 a:hover{
+        font-size: 10px;
+        font-weight: normal;
     }
     .multiple-cards .cards{
         width: 70%;
@@ -733,8 +805,8 @@ border-radius: 20px;
         width: 90%;
     }
     .ourmentor p{
-        font-size: 13px;
-        font-weight: none;
+        font-size: 8px;
+        font-weight: normal;
 
     }
     .partners p{
@@ -748,8 +820,8 @@ border-radius: 20px;
         font-size: 15px;
     }
     .partners img{
-        width: 80%;
-        height: 30%;
+        width: 70%;
+        height: 190px;
         margin: 15px auto;
     }
     .moto .heading{
@@ -765,13 +837,58 @@ border-radius: 20px;
         width: 80%;
         margin: auto;
     }
+    .c1{
+        min-width: 30%;
+    }
+    .navbar-nav{
+        background-color: white;
+align-items: start;
+position: relative;
+left: 0px;
+    }
+    .dropbtn{
+        width: 100%;
 }
-@media only screen and (max-width:331px){
+.dropdown-content-1 a:hover{
+font-size: 10px;
+font-weight: normal;
+color: blue;
+}
+.dropdown-content-1{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    /* background-color:whitesmoke;
+    padding: 10px; */
+    width: 170%;
+}
+}
+@media only screen and (max-width:332px){
     .content .btn{
         width: 35%;
         height: 54px;
         border-radius: 20px;
         font-size: 7px;
+    }
+    .info-3{
+        font-weight: normal;
+    }
+    .info-3 h2{
+        font-size: 20px;
+        font-weight: normal;
+        text-align: start;
+    }
+    .thought-author q{
+        font-size: 15px;
+    }
+    .whychooseus img {
+        width: 90%;
+        height: 15rem;
+    }
+    .price .btn {
+        width: 60%;
+        border-radius: 13px;
     }
     .basic-info{
         font-size: 15px;
