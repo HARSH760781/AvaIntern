@@ -27,6 +27,9 @@ app.set("view engine", "hbs");
 app.get("/", (req, res) => {
   res.render("index");
 });
+app.get("/faq", (req, res) => {
+  res.render("faq");
+});
 app.get("/career", (req, res) => {
   res.render("career");
 });

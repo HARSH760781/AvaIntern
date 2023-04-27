@@ -366,6 +366,99 @@ background: rgb(240, 228, 240);
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
   }
+  /* faqs */
+  .heading_faqs{
+    text-align: center;
+    
+    color: blue;
+  }
+  .heading_faqs h1{
+    font-weight: bolder;
+    font-size: 80px;
+  }
+  .questions{
+    width: 80%;
+    /* background: grey; */
+    margin: auto;
+  }
+  .que{
+    font-size: 30px;
+    width: 90%;
+    background:rgb(246, 246, 160);
+    /* border: 5px solid black; */
+    border-radius: 30px;
+    padding: 10px;
+    margin: 5% auto;
+  }
+  .que span{
+    font-size: 40px;
+    font-weight: bold;
+  }
+  /* whychooseus */
+  .whychooseus{
+    padding: 5% 10px;
+    width: 90%;
+    margin: auto;
+    justify-content: space-around;
+    display: flex;
+  }
+  .whychooseus img{
+    width: 35%;
+border-radius: 5%;  
+height: 29rem;
+  }
+  .moto{
+    width: 40%;
+  }
+  .moto .heading{
+    font-size: 46px;
+    font-weight: bolder;
+  }
+  .moto p{
+    font-size: 20px;
+  }
+  /* partners */
+  .partners{
+    width: 90%;
+    margin:10% auto;
+  }
+  .partners p{
+    font-size: 50px;
+    text-align: center;
+    margin: 5% auto;
+  }
+  .imgs{
+    width: 100%;
+    display: flex;
+  }
+  .imgs img{
+    width: 20%;
+    height: 15rem;
+    margin: auto;
+    border: 3px solid wheat;
+    border-radius: 5px;
+    box-shadow: #e26b6b;
+  }
+/* Provide */
+.provide{
+    width: 80%;
+    margin: auto;
+}
+.provide-content{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.provide p{
+    /* font-style: oblique; */
+    font-size: 50px;
+    width: 50%;
+    font-weight: bold;
+}
+.provide .img img{
+    width: 100%;
+    height: 25rem;
+}
 
 /* Pricing */
 .pricing{
@@ -391,7 +484,12 @@ border-radius: 20px;
 .navbar{
     width: 100%;
 }
-
+.ourmentor {
+    margin: 10% auto;
+}
+.ourmentor hr{
+    width: 60%;
+}
 .ourmentor p{
     width:80%;margin:auto;font-size:30px;font-weight:bold
 }
@@ -411,6 +509,18 @@ border-radius: 20px;
     height: 50px;
     border-radius: 20px;
 }
+.plan{
+    width: 90%;
+    margin: 20px    auto;
+}
+.plan img{
+    width: 100%;
+    margin: 20px auto;
+}
+.provide-content span{
+    color:rgb(212, 212, 97);
+    font-size:65px
+}
 
 
 
@@ -418,6 +528,25 @@ border-radius: 20px;
 @media only screen and (max-width:1075px){
 .component-extra h1{
     font-size: 40px;
+}
+.whychooseus{
+    width: 70%;
+    margin: auto;
+    flex-direction: column;
+}
+.whychooseus img{
+    width: 100%;
+    height: 20rem;
+}
+.moto{
+    width: 100%;
+    padding-top: 5%;
+}
+.provide-content p{
+    font-size: 30px;
+}
+.provide-content span{
+    font-size: 35px;
 }
 .container-fluid{
     width: 100%;
@@ -474,8 +603,11 @@ border-radius: 20px;
         display: flex;
         flex-direction: row;
     }
+    .imgs img{
+        height: 8rem;
+    }
     .card-text b{
-        font-size: 20px;
+        font-size: 15px;
     }
     .multiple-cards{
         display: flex;
@@ -512,8 +644,12 @@ border-radius: 20px;
         height: 300px;
     }
 
-    .ourmentor p{
-        font-size: 15px;
+    .mentor {
+        width: 80%;
+        margin: auto;
+        font-size: 25px;
+        font-weight: bold;
+        text-align: center;
     }
     footer h1{
         font-size:20px ;
@@ -522,6 +658,28 @@ border-radius: 20px;
 @media only screen and (max-width:652px){
     .content{
         font-size: 20px;
+    }
+
+    .provide-content {
+        width: 100%;
+        display: flex;
+        /* float: left;/ */
+        flex-direction: column-reverse;
+    }
+    .provide-content .img{
+        width: 100%;
+    }
+    .provide-content .img img{
+        width: 70%;
+    }
+    .provide-content p{
+        width: 80%;
+        /* margin: auto; */
+        text-align: start;
+    }
+    .provide-content img{
+        width: 60%;
+        float: right;
     }
     .basic-info{
         font-size: 20px;
@@ -564,8 +722,41 @@ border-radius: 20px;
         width: 70%;
         margin: auto;
     }
+    .mentor {
+        font-size: 13px;
+        font-weight: none;
+    }
     .content .btn{
         width: 30%;
+    }
+    .whychooseus{
+        width: 90%;
+    }
+    .ourmentor p{
+        font-size: 13px;
+        font-weight: none;
+
+    }
+    .partners p{
+        font-size: 2em;
+    }
+    .partners .imgs{
+        display: flex;
+        flex-direction: column;
+    }
+    .provide-content p{
+        font-size: 15px;
+    }
+    .partners img{
+        width: 80%;
+        height: 30%;
+        margin: 15px auto;
+    }
+    .moto .heading{
+        font-size: 30px;
+    }
+    .moto p{
+        font-size: 15px;
     }
     .content b{
         font-size: 15px;
@@ -597,5 +788,14 @@ border-radius: 20px;
         text-align: center;
         margin: 10px auto;
       }
+      .basic-info{
+        font-size: 10px;
+      }
+      .some-btn b{
+        font-size: 11px;
+      }
 
+      .card-text{
+        font-size: 15px;
+      }
 }
