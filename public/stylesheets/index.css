@@ -131,6 +131,21 @@ padding: 60px 0;
     display: flex;
     justify-content: space-around;
 }
+.info-2 {
+    width: 100%;
+    position: relative;
+    animation: move 5s linear both infinite alternate,rotate 0.3s linear 5s;
+  }
+  
+  @keyframes move {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: calc(100% - 50px); /* The calculation is to ensure the div doesn't go beyond the container's width */
+    }
+  }
+  
 .info-3{
     margin-top: 10%;
     width:  40%;
