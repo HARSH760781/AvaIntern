@@ -59,6 +59,12 @@
     width: 87%;
     margin: auto;
 }
+.para{
+    font-size: 35px;
+    font-family: robo;
+    font-weight: bold;
+    text-align: center;
+}
 .card img{
     height: 200px;
 }
@@ -66,6 +72,9 @@
     width: 100%;
     display: flex;
     margin: 3% 0;
+}
+.card-text{
+    font-size: 20px;
 }
 .cards .card{
     width: 25%;
@@ -464,6 +473,9 @@ border-radius: 20px;
     .cards{
         display: flex;
         flex-direction: row;
+    }
+    .card-text b{
+        font-size: 20px;
     }
     .multiple-cards{
         display: flex;
