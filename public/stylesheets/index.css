@@ -66,6 +66,9 @@
     width: 80%;
     margin: auto;
 }
+.number h1{
+    text-align: center;
+}
 .number p{
     font-size: 100%;
     font-weight: bold;
@@ -596,7 +599,7 @@ background: rgb(240, 228, 240);
     margin: 5% auto;
   }
   .imgs{
-    width: 200%;
+    width: 100%;
     display: flex;
     margin: auto;
     overflow: hidden;
@@ -1020,9 +1023,16 @@ border-radius: 20px;
    .number{
     width: 95%;
    }
+   
    .number p{
     margin: 0 5px;
+    font-size: 10px;
    }
+   .number h1{
+    text-align: center;
+    font-size: 80%;
+   }
+
     .provide-content p{
         font-size: 15px;
     }
