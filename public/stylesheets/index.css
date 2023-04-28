@@ -8,6 +8,9 @@
 .navbar-nav{
     z-index: 1;
 }
+.dropdown{
+    z-index: 1;
+}
 .bg-body-tertiary{
     background-color: white;
     --bs-bg-opacity: -1;
@@ -46,6 +49,11 @@
     font-size: 25px;
     font-weight: lighter;
 }
+.container .images{
+    width: 100%;
+    height: 400px;
+
+}
 .container img{
     width: 60%;
     height: 75%;
@@ -72,7 +80,7 @@
   
 
   .slide:last-child {
-    animation-delay: 10s;
+    animation-delay: 1s;
     animation: slideshow 5s linear infinite;
   }
   
@@ -80,14 +88,14 @@
     0% {
       opacity: 1;
     }
-   25% {
+   /* 25% {
       opacity: 0.5;
-    }
-   50% {
+    } */
+   /* 50% {
       opacity: 0;
-    }
+    } */
     100% {
-      opacity: 1;
+      opacity: 0;
     }
   }
   
@@ -97,7 +105,10 @@
 }
 .btn a {
     text-decoration: none;
-    color: white;
+    color: rgb(33, 6, 6);
+}
+.price .btn{
+    width: 50%;border-radius: 20px;position:absolute;top:5%;left:20%
 }
 .btn:hover{
     transform: scale(1.2,1.2 )
@@ -114,15 +125,37 @@
     text-align: center;
 }
 .card img{
-    height: 200px;
+    height: 300px;
+    opacity: 0.5;
+}
+.card-body{
+    text-align: center;
+}
+.card-body .btn{
+        position: absolute;
+        top: 5%;
+        left: 37%;
 }
 .cards{
     width: 100%;
     display: flex;
     margin: 3% 0;
 }
+.section{
+    width: 90%;
+display: flex;
+flex-direction: column;
+text-align: center;
+}
 .card-text{
     font-size: 20px;
+    font-weight: bolder;
+    position: absolute;
+top: 30%;
+color: rgb(27, 11, 11);
+}
+.section img{
+    width: 90%;
 }
 .cards .card{
     width: 25%;
@@ -158,7 +191,7 @@ align-items: center;
 display: flex;
 flex-direction: column;
 justify-content: center;
-padding: 60px 0;
+padding: 60px 0 0 0;
 }
 .thought-author{
     width: 45%;
@@ -437,7 +470,9 @@ text-align: start;
     margin: 5% 10% ;
     font-size: 22px;
 }
-
+.btn{
+    background-color: #ffd017;
+}
 .overview{
     background: whitesmoke;
     width: 80%;
@@ -454,6 +489,9 @@ margin: 5% auto;
 display: flex;
 padding: 2%;
 background: rgb(240, 228, 240);
+}
+.certificates .card img{
+    opacity: 1;
 }
 .certificates img{
     height: 300px;
@@ -710,6 +748,7 @@ border-radius: 20px;
     .container .img img{
         width: 100%;
         height: 92%;
+        z-index: -1;
     }
     .container .content{
         width: 100%;
@@ -755,6 +794,7 @@ border-radius: 20px;
     }
     .extra .img{
         width: 100%;
+        height: auto;
     }
     .extra .info-3{
         width: 100%;
@@ -828,6 +868,7 @@ border-radius: 20px;
     }
     .multiple-cards .cards .card{
         width: 100%;
+        height: 300px;
     }
     .thoughts{
         display: flex;
@@ -854,6 +895,12 @@ border-radius: 20px;
     }
     .c1{
         min-width: 25%;
+    }
+    .c1 p{
+        font-size: 10px;
+    }
+    .partners p{
+        font-size: 30px;
     }
 }
 @media only screen and (max-width:438px)
