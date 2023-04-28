@@ -1,5 +1,6 @@
 var createError = require("http-errors");
 var express = require("express");
+var http = require("http");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
@@ -14,6 +15,7 @@ const partialsPath = path.join(__dirname, "./templates/partials");
 hbs.registerPartials(partialsPath);
 
 app.use(express.static(path.join(__dirname, "./public/stylesheets")));
+app.use(express.static(path.join(__dirname, "./public/javascripts")));
 app.use(express.static(path.join(__dirname, "./public/images")));
 
 // view engine setup
@@ -23,7 +25,6 @@ app.set("view engine", "hbs");
 // app.use(express.json());
 // app.use(express.urlencoded({ extended: false }));
 // app.use(cookieParser());
-
 app.get("/", (req, res) => {
   res.render("index");
 });
