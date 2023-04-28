@@ -47,9 +47,49 @@
     font-weight: lighter;
 }
 .container img{
-    width: 75%;
-    height: 90%;
+    width: 60%;
+    height: 75%;
 }
+
+/* animation in img container */
+.img {
+    width: 50%;
+    height: 500px;
+    position: relative;
+  }
+  
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .slide.active {
+    opacity: 1;
+  }
+  
+  .slide:last-child {
+    animation-delay: 5s;
+    animation: slideshow 10s linear infinite;
+  }
+  
+  @keyframes slideshow {
+    0% {
+      opacity: 0;
+    }
+    16.666% {
+      opacity: 0.5;
+    }
+    33.333% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
 .btn{
     font-size: 15px;
     width: 90px;
@@ -131,7 +171,7 @@ padding: 60px 0;
     display: flex;
     justify-content: space-around;
 }
-.info-2 {
+.info-2,.partners p {
     width: 100%;
     position: relative;
     animation: move 5s linear both infinite alternate,rotate 0.3s linear 5s;
@@ -142,7 +182,7 @@ padding: 60px 0;
       left: 0;
     }
     100% {
-      left: calc(100% - 50px); /* The calculation is to ensure the div doesn't go beyond the container's width */
+      left: calc(100% - 50px); 
     }
   }
   
@@ -154,6 +194,22 @@ padding: 60px 0;
 .info-3 h2{
     font-weight: bold;
 }
+.about h1:hover{
+    animation: rotate 1s linear 0.1s;
+  animation-fill-mode: forwards;
+  transform-origin:center;
+}
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(-180deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
 .blog{
     width: 100%;
     background: whitesmoke;
@@ -273,7 +329,7 @@ padding: 60px 0;
     }
     .about{
         width: 80%;
-margin: 10% auto;
+        margin: 10% auto;
     }
     .about hr{
         width: 50%;
@@ -375,12 +431,10 @@ text-align: start;
     width: 100%;
 }
 .course-details{
-    background: rgb(244, 234, 244);
+    background: rgb(241, 245, 206);
     padding-left: 20px;
     margin: 5% 10% ;
-    font-size: 40px;
-    font-family: robo;
-    font-weight: bold;
+    font-size: 25px;
 }
 
 .overview{
@@ -402,10 +456,11 @@ background: rgb(240, 228, 240);
 }
 .certificates img{
     height: 300px;
-    width: 100%;}
-    .certificates:hover img{
+    width: 100%;
+}
+.certificates:hover img{
     animation: shake 0.5s; 
-  animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
 
     
 }
@@ -422,6 +477,7 @@ background: rgb(240, 228, 240);
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
   }
+
   /* faqs */
   .heading_faqs{
     text-align: center;
@@ -1037,4 +1093,35 @@ color: blue;
     .links a img{
         height: 25px;   
     }
+}
+
+/* courses responsive */
+@media only screen and (max-width:820px)
+{
+    .para{
+        font-size: 30px;
+    }
+}
+@media only screen and (max-width:650px)
+{
+    .para{
+        font-size: 30px;
+    }
+    .cards-level .cards{
+        flex-direction: column;
+    }
+    .cards-level .cards .card{
+        width: 65%;
+        margin: 5% auto;
+    }
+    .container img{
+        height: 300px;
+    }
+}
+@media only screen and (max-width:400px)
+{
+    .para{
+        font-size: 20px;
+    }
+
 }
