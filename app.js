@@ -22,9 +22,6 @@ app.use(express.static(path.join(__dirname, "./public/images")));
 app.set("views", templatePath);
 app.set("view engine", "hbs");
 
-// app.use(express.json());
-// app.use(express.urlencoded({ extended: false }));
-// app.use(cookieParser());
 app.get("/", (req, res) => {
   res.render("index");
 });
@@ -43,38 +40,11 @@ app.get("/career", (req, res) => {
 app.get("/course", (req, res) => {
   res.render("course");
 });
-app.get("/course/ai", (req, res) => {
-  res.render("ai");
-});
-app.get("/course/ml", (req, res) => {
-  res.render("ml");
-});
-app.get("/course/app", (req, res) => {
-  res.render("app");
-});
-app.get("/course/cad", (req, res) => {
-  res.render("cad");
-});
-app.get("/course/cyber", (req, res) => {
-  res.render("cyber");
-});
 app.get("/course/ds", (req, res) => {
   res.render("ds");
 });
-app.get("/course/language", (req, res) => {
-  res.render("language");
-});
 app.get("/course/marketing", (req, res) => {
   res.render("marketing");
-});
-app.get("/course/mern", (req, res) => {
-  res.render("mern");
-});
-app.get("/course/python", (req, res) => {
-  res.render("python");
-});
-app.get("/course/robot", (req, res) => {
-  res.render("robot");
 });
 app.get("/course/web", (req, res) => {
   res.render("web");

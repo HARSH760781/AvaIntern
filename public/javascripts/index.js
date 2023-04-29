@@ -1,6 +1,6 @@
 window.addEventListener("scroll", function () {
   const scrollPosition = window.scrollY;
-  const myElementPosition = document.querySelector(".about").offsetTop;
+  const myElementPosition = document.querySelector(".mentor").offsetTop;
 
   if (scrollPosition >= myElementPosition) {
     let counter1 = document.querySelector(".counter1");

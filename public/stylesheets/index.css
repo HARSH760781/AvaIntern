@@ -997,14 +997,17 @@ border-radius: 20px;
     .provide-content {
         width: 100%;
         display: flex;
-        /* float: left;/ */
-        flex-direction: column-reverse;
+        /* float: left;/
+        /* flex-direction: column-reverse;  */
     }
     .provide-content .img{
-        width: 100%;
+        width: 80%;
+        height: 12rem;
     }
     .provide-content .img img{
-        width: 70%;
+        width: 80%;
+        height: 100%;
+
     }
     .provide-content p{
         width: 80%;
