@@ -45,6 +45,19 @@ window.addEventListener("scroll", function () {
     }
     const intervalId2 = setInterval(incrementCounter2);
   }
+  counter1.innerText += "+";
+});
+
+// get the navbar menu element
+var navbarMenu = document.querySelector(".navbar-collapse");
+
+// listen for clicks on the document
+document.addEventListener("click", function (event) {
+  // check if the click was outside the navbar menu
+  if (!navbarMenu.contains(event.target)) {
+    // close the navbar menu
+    navbarMenu.classList.remove("show");
+  }
 });
 
 //partner->
