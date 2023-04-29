@@ -1312,6 +1312,12 @@ width: 98px;
       .info-2 b{
         font-size: 20px;
       }
+      .about li{
+        font-size: 12px;
+      }
+      .author{
+        padding: 10px;
+      }
       
 }
 /* Career responsive */
