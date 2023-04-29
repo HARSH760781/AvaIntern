@@ -1,6 +1,6 @@
 window.addEventListener("scroll", function () {
   const scrollPosition = window.scrollY;
-  const myElementPosition = document.querySelector(".imgs").offsetTop;
+  const myElementPosition = document.querySelector(".about").offsetTop;
 
   if (scrollPosition >= myElementPosition) {
     let counter1 = document.querySelector(".counter1");
@@ -65,3 +65,89 @@ setInterval(() => {
   );
   slideshow.style.transform = `translateX(${translateX}px)`;
 }, 5000);
+
+// pagination
+
+// *******************************************************************************
+
+const slider = document.querySelector(".slider");
+const container = document.querySelector(".slider-container");
+const slides = document.querySelectorAll(".slide");
+const pagination = document.querySelector(".pagination");
+
+let currentSlide = 0;
+let interval = null;
+
+// create pagination buttons
+for (let i = 0; i < slides.length; i++) {
+  const button = document.createElement("button");
+  button.addEventListener("click", () => {
+    goToSlide(i);
+    clearInterval(interval);
+    interval = setInterval(nextSlide, 5000);
+  });
+  pagination.appendChild(button);
+}
+
+// update pagination on slide change
+function updatePagination() {
+  const buttons = pagination.querySelectorAll("button");
+  buttons.forEach((button) => button.classList.remove("active"));
+  buttons[currentSlide].classList.add("active");
+}
+
+// go to specific slide
+function goToSlide(slideIndex) {
+  currentSlide = slideIndex;
+  container.style.left = `-${currentSlide * 100}%`;
+  updatePagination();
+}
+
+// go to next slide
+function nextSlide() {
+  currentSlide++;
+  if (currentSlide >= slides.length) {
+    currentSlide = 0;
+  }
+  container.style.left = `-${currentSlide * 100}%`;
+  updatePagination();
+}
+
+// start auto slide
+interval = setInterval(nextSlide, 5000);
+
+// make slider responsive
+function resize() {
+  const slideWidth = slider.clientWidth;
+  container.style.width = `${slides.length * slideWidth}px`;
+  slides.forEach((slide) => (slide.style.width = `${slideWidth}px`));
+  container.style.left = `-${currentSlide * slideWidth}px`;
+}
+
+window.addEventListener("resize", resize);
+resize();
+
+//********************************************* second pagination */
+const slideshows = document.getElementById("slideshow");
+const imags = slideshows.getElementsByTagName("img");
+let currentImageIndex = 0;
+
+function showNextImage() {
+  imags[currentImageIndex].style.display = "none";
+  currentImageIndex = (currentImageIndex + 1) % imags.length;
+  imags[currentImageIndex].style.display = "block";
+}
+
+setInterval(showNextImage, 3000);
+// *************slider********
+const slidesho = document.getElementById("slidesho");
+const imag = slidesho.getElementsByTagName("img");
+let currentImageInde = 0;
+
+function showNextImag() {
+  imag[currentImageInde].style.display = "none";
+  currentImageInde = (currentImageInde + 1) % imag.length;
+  imag[currentImageInde].style.display = "block";
+}
+
+setInterval(showNextImag, 3000);
