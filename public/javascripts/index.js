@@ -16,16 +16,17 @@ window.addEventListener("scroll", function () {
       }
     }
     const intervalId1 = setInterval(incrementCounter1, 4);
-
+    let x = counter1.innerHTML;
+    console.log(x);
     let counter3 = document.querySelector(".counter3");
     let targetNumber3 = 35000;
-    let currentNumber3 = 1000;
+    let currentNumber3 = 700;
 
     function incrementCounter3() {
       if (currentNumber3 >= targetNumber3) {
         clearInterval(intervalId3);
       } else {
-        currentNumber3 += 500;
+        currentNumber3 += 686;
         counter3.textContent = currentNumber3;
       }
     }
@@ -33,13 +34,13 @@ window.addEventListener("scroll", function () {
 
     let counter2 = document.querySelector(".counter2");
     let targetNumber2 = 500;
-    let currentNumber2 = 10;
+    let currentNumber2 = 0;
 
     function incrementCounter2() {
       if (currentNumber2 >= targetNumber2) {
         clearInterval(intervalId2);
       } else {
-        currentNumber2 += 10;
+        currentNumber2 += 5;
         counter2.textContent = currentNumber2;
       }
     }
@@ -59,27 +60,6 @@ document.addEventListener("click", function (event) {
     navbarMenu.classList.remove("show");
   }
 });
-
-//partner->
-const slideshow = document.querySelector(".imgs");
-const images = slideshow.getElementsByTagName("img");
-let currentIndex = 0;
-
-setInterval(() => {
-  currentIndex++;
-  if (currentIndex >= images.length) {
-    currentIndex = 0;
-  }
-  const currentImageWidth = images[currentIndex].clientWidth;
-  const translateX = -(
-    currentIndex * currentImageWidth -
-    containerWidth / 2 +
-    currentImageWidth / 2
-  );
-  slideshow.style.transform = `translateX(${translateX}px)`;
-}, 5000);
-
-// pagination
 
 // *******************************************************************************
 
@@ -164,3 +144,5 @@ function showNextImag() {
 }
 
 setInterval(showNextImag, 3000);
+
+//**********blog***************** */
