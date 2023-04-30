@@ -1372,6 +1372,7 @@ margin: 10px 0;
     }
     .partners img{
         width: 8%;
+        height: 55px;
     }
     .moto .heading{
         font-size: 30px;
@@ -1491,8 +1492,8 @@ color: blue;
         position: static;
 width: 98px;
       }
-      .partners p{
-        font-size: 1em;
+      .partners b{
+        font-size: 12px;
       }
       .partners img{
         height: 50px;
@@ -1560,11 +1561,18 @@ width: 98px;
         flex-direction: column;
       }
       .some-btn .btn{
-        width: 50%;
+        width: auto;
         margin: 1%  auto;
         height: 30px;
+        min-width: 50%;
       }
-      
+      .navbar-brand img{
+      height: 33px;
+      }
+      .navbar-toogle-icon{
+        width: 0.7em;
+        height: 0.7em;
+      }
 }
 /* Career responsive */
 @media only screen and (max-width:770px)
