@@ -1204,8 +1204,8 @@ margin: 10px 0;
     .basic-info{
         font-size: 20px;
     }
-    .info-2 p{
-        font-size: 12px;
+    .info-2 marquee p{
+        font-size: 0px;
     }
     .our_courses{
         width: 95%;
@@ -1370,10 +1370,7 @@ margin: 10px 0;
     .provide-content p{
         font-size: 15px;
     }
-    .partners img{
-        width: 8%;
-        height: 55px;
-    }
+   
     .moto .heading{
         font-size: 30px;
     }
@@ -1496,9 +1493,9 @@ width: 98px;
         font-size: 12px;
       }
       .partners img{
-        height: 50px;
-        width: 50px;
-      }
+        width: 40px;
+        height: 40px;
+    }
       .slider{
         height: 200px;
       }
