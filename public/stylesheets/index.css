@@ -30,6 +30,7 @@
     font-weight: 10px;
 }
 .container{
+    width: 90%;
     display: flex;
     justify-content: space-between;   
 }
@@ -101,7 +102,7 @@ overflow: hidden;
   .pagination button.active {
     background-color: #555;
   }
-  
+/*   
 .container::before{
     content: "";
     position: absolute;
@@ -113,9 +114,9 @@ overflow: hidden;
     overflow: hidden;
     background-size: 100%;
     background-repeat: no-repeat;
-    opacity: 0.5;
+    opacity: 1;
     z-index: -1;
-}
+} */
 /* main{
 background-image: url('bgg.jpg');
 } */
@@ -126,11 +127,13 @@ background-image: url('bgg.jpg');
     width: 40%;
 }
 .content{
-    margin: 0% auto;
-    width: 50%;
+    box-shadow: 8px 8px 13px 11px #f1e68c;
+    margin:auto;
+    width: 80%;
     font-size: 45px;
     font-weight: bolder;
-    /* margin-right: 10px; */
+    padding: 22px;
+    border-radius: 15px;
 }
 .basic-info{
     font-size: 25px;
@@ -142,7 +145,7 @@ background-image: url('bgg.jpg');
 
 }
 .container img{
-    width: 60%;
+    width: 100%;
     height: 100%;
 }
 /* number */
@@ -245,7 +248,11 @@ background-image: url('bgg.jpg');
 .cards{
     width: 100%;
     display: flex;
-    margin: 3% 0;
+    margin: 5% 0;
+}
+.cards .card:hover{
+    transform: scale(1.2,1.2);
+    background-color: rgb(229, 243, 183);
 }
 .section{
     width: 90%;
@@ -314,6 +321,12 @@ color: rgb(27, 11, 11);
     margin-top: 10%;
     width:  40%;
     font-weight: bold;
+    box-shadow: -26px -17px 28px 3px #232302;
+padding: 19px;
+border-radius: 20px;
+}
+.info-3:hover{
+    transform: scale(1.1,1.1);
 }
 .number .counter1,.number .counter3,.number .counter2 {
     color: red;
@@ -651,6 +664,8 @@ background: rgb(240, 228, 240);
   }
   .moto{
     width: 40%;
+    box-shadow: 0 0 5px 5px rgb(226, 230, 178);
+    padding: 15px;
   }
   .moto .heading{
     font-size: 46px;
@@ -682,6 +697,11 @@ background: rgb(240, 228, 240);
     height: 300px;
     overflow: hidden;
   }
+  .partners img{
+    height: 100px;
+    border-radius: 50px;
+    margin: 5px 20px;
+  }
   
   /* Review*/
   .review-slider {
@@ -690,6 +710,9 @@ background: rgb(240, 228, 240);
     margin: 20px;
     width:80%;
     margin:5% auto;
+  }
+  .review-slider:hover{
+    transform: scale(1.1,1.1);
   }
   
   .review-slider h1{
@@ -848,7 +871,7 @@ padding: 60px 0 0 0;
 }
 .provide p{
     /* font-style: oblique; */
-    font-size: 50px;
+    font-size: 35px;
     width: 50%;
     font-weight: bold;
 }
@@ -928,6 +951,16 @@ border-radius: 20px;
     width: 47%;
     height: 25rem;
 }
+.extra .img{
+    width: 45%;
+}
+.extra .img img{
+    width: 60%;
+box-shadow: 7px 20px 31px 6px #f4e612;
+}
+.extra .img img:hover{
+    transform: scale(1.2,1.1);
+}
 
 
 
@@ -973,7 +1006,7 @@ border-radius: 20px;
 }
 .content{
     font-size: 35px;
-    margin:0;
+    margin:auto;
     padding: 5px;
 }
 /* .container img{
@@ -989,12 +1022,22 @@ border-radius: 20px;
 @media only screen and (max-width:992px)
 {
     .container {
+        width: 100%;
         display: flex;
         flex-direction: column;
+    }
+    .container-fluid{
+        height: auto;
+    }
+    .navbar-brand img{
+        height: 50px;
     }
     .navbar-nav{
         /* width: 47; */
         background-color:white;
+    }
+    .card-text{
+        font-size: 15px;
     }
     .dropdown-content{
         left: 0%;
@@ -1034,11 +1077,22 @@ width: auto;
 left: 0;
 margin: 10px 0;
     }
+    .slider{
+        height: 400px;
+    }
+    .whychooseus img{
+        width: 65%;
+        height: 25rem;
+        margin:auto;
+    }
 }
 @media only screen and (max-width:815px) {
     .cards{
         display: flex;
         flex-direction: row;
+    }
+    .slider{
+        height: 450px;
     }
     .imgs img{
         height: 8rem;
@@ -1064,6 +1118,10 @@ margin: 10px 0;
         width: 100%;
         height: auto;
     }
+    /* .extra .img img{
+        width: 70%;
+        box-shadow: 7px 26px 31px 6px #f4e612;
+    } */
     .extra .info-3{
         width: 100%;
         text-align: center;
@@ -1085,9 +1143,9 @@ margin: 10px 0;
     .mentor {
         width: 80%;
         margin: auto;
-        font-size: 25px;
+        font-size: 20px;
         font-weight: bold;
-        text-align: center;
+        text-align: start;
     }
     footer h1{
         font-size:20px ;
@@ -1097,6 +1155,13 @@ margin: 10px 0;
     .content{
         font-size: 20px;
     }
+    
+    .container .img img:first-child {
+        opacity: 0.9;
+        width: 100%;
+        border-radius: 5px;
+        margin: auto;
+      }
 
     .about h1{
         font-size: 25px;
@@ -1138,6 +1203,9 @@ margin: 10px 0;
     }
     .basic-info{
         font-size: 20px;
+    }
+    .info-2 p{
+        font-size: 12px;
     }
     .our_courses{
         width: 95%;
@@ -1187,6 +1255,43 @@ margin: 10px 0;
     .partners p{
         font-size: 30px;
     }
+    .slider{
+        height: 230px;
+       }
+       .review-slider h1{
+        font-size: 20px;
+       }
+    .card-text{
+        font-size: 15px;
+    }
+    .moto .heading{
+        font-size: 39px;
+    }
+    .whychooseus img{
+        height: 20rem;
+    }
+    .moto p{
+        font-size: 15px;
+    }
+    #slideshow{
+        height:300px;
+    }
+    .ourmentor p{
+        font-size: 15px;
+    }
+    .info-3:hover{
+        transform:none;
+    }
+    .extra .img img:hover{
+        transform: none;
+    }
+    .extra .img img{
+        width: 50%;
+        height: 400px;
+    }
+    .review-slider:hover{
+        transform: none;
+    }
 }
 @media only screen and (max-width:438px)
 {
@@ -1230,7 +1335,7 @@ margin: 10px 0;
         height: 20rem;
     }
     .ourmentor p{
-        font-size: 8px;
+        font-size: 10px;
         font-weight: normal;
 
     }
@@ -1240,6 +1345,7 @@ margin: 10px 0;
    .number{
     width: 95%;
    }
+   
    
    .number p{
     margin: 0 5px;
@@ -1265,9 +1371,7 @@ margin: 10px 0;
         font-size: 15px;
     }
     .partners img{
-        width: 70%;
-height: 108px;
-margin: 15px 10px;
+        width: 8%;
     }
     .moto .heading{
         font-size: 30px;
@@ -1321,8 +1425,13 @@ color: blue;
         border-radius: 20px;
         font-size: 7px;
     }
+    
     .card-body h4{
         font-size: 15px;
+    }
+    .cards .card:hover{
+        transform: scale(1.1,1.1);
+        margin: 20px auto;
     }
     .info-3{
         font-weight: normal;
@@ -1385,11 +1494,9 @@ width: 98px;
       .partners p{
         font-size: 1em;
       }
-      .partners .imgs{
-        height: 100px;
-      }
-      .partners .imgs img{
-        height: 75%;
+      .partners img{
+        height: 50px;
+        width: 50px;
       }
       .slider{
         height: 200px;
@@ -1421,13 +1528,41 @@ width: 98px;
         font-size: 20px;
       }
       .info-2 b{
-        font-size: 20px;
+        font-size: 10px;
+      }
+      .info-2 p{
+        font-size: 0;
       }
       .about li{
         font-size: 12px;
       }
       .author{
         padding: 10px;
+      }
+      .container img{
+        height: 15rem;
+      }
+      .review .text{
+        font-size: 12px;
+      }
+      .review .author{
+        font-size:15px;
+      }
+      .extra .img img {
+        width: 90%;
+        height: 325px;
+        box-shadow: 0px 0 4px -6px #f4e612;
+      }
+      .info-3 .btn{
+        width: 50%;
+      }
+      .some-btn{
+        flex-direction: column;
+      }
+      .some-btn .btn{
+        width: 50%;
+        margin: 1%  auto;
+        height: 30px;
       }
       
 }

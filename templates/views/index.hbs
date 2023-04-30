@@ -5,10 +5,9 @@
 <body>
   {{>header}}
     <main>
-        <div class="container my-5">
-                <div class="img">
-                <img src="/bg-2.jpg" alt="Loading">
-            </div>
+        <div class="container my-3">
+            <img src="bgg.jpg" alt="">
+        </div>
             <div class="content">
                 <p>Learn without limits and spread knowledge</p>
                 <p class="basic-info">Build new skills for that "this is my year" feeling with
@@ -20,12 +19,11 @@
                 <div class="some-btn" style="display: flex;justify-content: space-around;margin-top: 5%;">
                     <button type="button" class="btn btn-warning"><b><a
                                 href="/course"> See Courses</a></b></button>
-                    <button type="button" class="btn btn-dark" style="color:black;"
+                    <button type="button" class="btn btn-warning" style="color:black;"
                         ><b>Watch Video</b></button>
                 </div>
                 
             </div>
-        </div>
        
 <div class="slider">
   <div class="slider-container">
@@ -37,20 +35,29 @@
 </div>
 
 <div class="partners">
+    <marquee behavior="alternate" direction="right">
             <p><b>Our Alumuni Works at</b></p>
-            <div class="imgs">
-                <img src="Microsoft.png" alt="Loading...">
-                <img src="adobe.png" alt="Loading...">
-                <img src="autodesk.jpeg" alt="Loading...">
-                <img src="cfa.webp" alt="Loading...">
-            </div>
+            </marquee>
+            <marquee behavior="scroll" direction="left" scrollamount="20">
+                <img src="microsoft.jpg" alt="">
+                <img src="tcs.png" alt="">
+                <img src="autodesk.png" alt="">
+                <img src="microsoft.jpg" alt="">
+                <img src="acenture.jpeg" alt="">
+                <img src="adobe.png" alt="">
+                <img src="microsoft.jpg" alt="">
+            </marquee>
         </div>
 
         <div class="our_courses">
             <div class="info-2 mx-3">
-                <h1><b> Our Popular Courses </b> </h1>
+                <marquee behavior="alternate" direction="left">
+                    <a style="text-decoration: none;color:black;" href="/course">
+                <h1 style="text-align: center;"><b> Our Popular Courses </b> </h1>
                 <p>Build new skills with new trendy courses and shine
                     for the next future career</p>
+                    </a>
+                    </marquee>
             </div>
             <div class="multiple-cards">
             <div class="cards">
@@ -129,7 +136,8 @@
         <div class="whychooseus">
             <img src="/why.jpg" alt="">
             <div class="moto">
-            <p class="heading">Why Choose Us ?</p>
+            <p class="heading">
+               <marquee behavior="alternate" direction="left" scrollamount="10px"> Why Choose Us ?</marquee></p>
             <p>Ava Intern is a rapidly growing training innovation
                 company that provides a significant number of elearning
                 arrangements for the global market under one
@@ -179,10 +187,8 @@
                 <p>Student of web Design</p>
             </div>
             <div class="thought-author">
-                <h2><q> Not only does my resume look impressive-filled with the
-                        names and logos of world-class institutions-but these
-                        certificates also bring me closer to my career goals by
-                        validating the skills I've learned </q></h2>
+                <h2><q> Success is not final, failure is not fatal: it is the courage to continue that counts.
+                    Believe you can and you're halfway there</q></h2>
             </div>
         </div>
 
@@ -215,8 +221,8 @@
 
         <div class="extra">
             <div class="img">
-                <img src="p3.jpg" style="position: relative;top: 30px;margin: 4px;width:45%;height:95%;border-radius:10px;" alt="Loading...">
-                <img src="p2.png" style="width: 45%;" alt="Loading...">
+                {{!-- <img src="p3.jpg" style="position: relative;top: 30px;margin: 4px;width:45%;height:95%;border-radius:10px;" alt="Loading..."> --}}
+                <img src="p2.png" alt="Loading...">
             </div>
             <div class="info-3">
                 <h2>Learner outcomes through our awesome platform</h2>
@@ -242,7 +248,9 @@
 
         
         <div class="ourmentor">
+            <marquee behavior="alternate" direction="left" scrollamount="25">
             <h1 style="text-align: center;color:rgb(247, 83, 54);font-size:50px"><b><b>Our Mentor</b></b></h1>
+            </marquee>
             <hr><hr><hr>
             <br>
             <div class="mentor">
@@ -273,7 +281,7 @@
         
         <div class="number">
             <div class="1">
-                <h1 class="counter1">10000 </h1>
+                <h1 class="counter1">10000</h1>
                 <p>Enrollment</p>
             </div>
              <div class="2">
@@ -281,7 +289,7 @@
             <p>Project Reviews</p>
             </div>
              <div class="3">
-                <h1 class="counter3">35000</h1>
+                <h1 class="counter3">35000 <span></span></h1>
             <p>Viewers</p>
             </div>
         </div>

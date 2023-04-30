@@ -207,3 +207,5 @@ function showNextImag() {
 }
 
 setInterval(showNextImag, 3000);
+
+// ********************************
