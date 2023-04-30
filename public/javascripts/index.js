@@ -1,3 +1,67 @@
+// //**********blog***************** */
+const reviews = document.querySelector(".reviews");
+const reviewSlides = document.querySelectorAll(".review");
+const paginationBtns = document.querySelectorAll(".page-btn");
+const sliderContainer = document.querySelector(".review-slider");
+
+let currentSlide1 = 0;
+let slideWidth1 = reviewSlides[0].clientWidth;
+
+// Next slide function
+function nextSlide1() {
+  // Increment current slide
+  //   console.log(1);
+  currentSlide1++;
+  // Reset current slide to 0 if we reach the end
+  if (currentSlide1 >= reviewSlides.length) {
+    currentSlide1 = 0;
+  }
+  // Update slider position
+  reviews.style.transform = `translateX(-${currentSlide1 * slideWidth1}px)`;
+  // Update active pagination button
+  setActivePaginationBtn(currentSlide1);
+}
+
+// Previous slide function
+// function prevSlide() {
+//   // Decrement current slide
+//   currentSlide1--;
+//   // Set current slide to the last slide if we go before the beginning
+//   if (currentSlide1 < 0) {
+//     currentSlide1 = reviewSlides.length;
+//   }
+//   // Update slider position
+//   reviews.style.transform = `translateX(-${currentSlide1 * slideWidth1}px)`;
+//   // Update active pagination button
+//   setActivePaginationBtn(currentSlide1);
+// }
+
+// Set active pagination button
+function setActivePaginationBtn(ind) {
+  // Remove active class from all buttons
+  paginationBtns.forEach((btn) => {
+    btn.classList.remove("active");
+  });
+  // Add active class to the button with the same index as the current slide
+  paginationBtns[ind].classList.add("active");
+}
+
+// Pagination button click event listeners
+paginationBtns.forEach((btn, ind) => {
+  btn.addEventListener("click", () => {
+    currentSlide1 = ind;
+    reviews.style.transform = `translateX(-${currentSlide1 * slideWidth1}px)`;
+    setActivePaginationBtn(currentSlide1);
+  });
+});
+
+// Start slider
+setActivePaginationBtn(currentSlide1);
+setInterval(() => {
+  nextSlide1();
+}, 5000);
+// /*****************Blog ends************/
+
 window.addEventListener("scroll", function () {
   const scrollPosition = window.scrollY;
   const myElementPosition = document.querySelector(".mentor").offsetTop;
@@ -46,7 +110,6 @@ window.addEventListener("scroll", function () {
     }
     const intervalId2 = setInterval(incrementCounter2);
   }
-  counter1.innerText += "+";
 });
 
 // get the navbar menu element
@@ -144,5 +207,3 @@ function showNextImag() {
 }
 
 setInterval(showNextImag, 3000);
-
-//**********blog***************** */
