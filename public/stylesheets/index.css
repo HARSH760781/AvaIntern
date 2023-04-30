@@ -488,9 +488,18 @@ text-align: start;
     }
     .banner h1{
         font-weight: bolder;color: red;font-size: 35px;margin: 35px;text-align: center;
+        position: relative;
+        top: 15px;
+    }
+    .banner b{
+        font-weight: bolder;
+position: relative;
+margin: 5% auto;
     }
     .banner img{
         width: 100%;
+        position: relative;
+        top: 75px;
     }
     .details{
         background: rgb(228, 196, 228);
@@ -1332,7 +1341,7 @@ box-shadow: 7px 20px 31px 6px #f4e612;
         width: 90%;
     }
     .whychooseus img{
-        height: 20rem;
+        height: 15rem;
     }
     .ourmentor p{
         font-size: 10px;
@@ -1621,8 +1630,7 @@ width: 98px;
         padding-top: 20px;
     }
     .banner h1{
-        font-size: 20px;
-        
+        font-size: 20px; 
     }
 }
 /* Contact responsive */
