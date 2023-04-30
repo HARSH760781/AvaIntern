@@ -1073,9 +1073,9 @@ box-shadow: 7px 20px 31px 6px #f4e612;
     }
     .navbar-nav button{
         position: relative;
-width: auto;
-left: 0;
-margin: 10px 0;
+        width: auto;
+        left: 0;
+        margin: 10px 0;
     }
     .slider{
         height: 400px;
@@ -1202,7 +1202,7 @@ margin: 10px 0;
         width: 100%;
     }
     .basic-info{
-        font-size: 20px;
+        font-size: 15px;
     }
     .info-2 marquee p{
         font-size: 0px;
@@ -1286,8 +1286,8 @@ margin: 10px 0;
         transform: none;
     }
     .extra .img img{
-        width: 50%;
-        height: 400px;
+        width: 66%;
+        height: 250px;
     }
     .review-slider:hover{
         transform: none;
