@@ -153,16 +153,36 @@ background-image: url('bgg.jpg');
     display: flex;
     justify-content: space-around;
     color: red;
-    width: 80%;
+    width: 95%;
     margin: auto;
 }
-.number h1{
-    text-align: center;
-}
 .number p{
-    font-size: 100%;
+    font-size: 20px;
     font-weight: bold;
     color: #ffd017;
+}
+.data{
+    display: flex;
+    justify-content: center;
+}
+.data span{
+    font-size: 30px;
+    position: sticky;
+    font-weight: bolder;
+}
+
+@media only screen and ( max-width:500px)
+{
+    .number{
+        flex-direction: column;
+        margin: 15% auto;
+    }
+}
+@media only screen and (max-width:250px)
+{
+    .number p{
+        font-size: 15px;
+    }
 }
 
 /* animation in img container */
@@ -339,6 +359,9 @@ border-radius: 20px;
 .number .counter1,.number .counter3,.number .counter2 {
     color: red;
     font-weight: bold;
+}
+.number  p{
+    text-align: center;
 }
 .info-3 h2{
     font-weight: bold;
@@ -899,31 +922,6 @@ padding: 60px 0 0 0;
     width: 45%;
     padding: 30px;
 }
-  /* .imgs img {
-    flex: 1;
-    height: 100%;
-    object-fit: cover;
-  } */
-  /*
-  .about h1 b {
-    /* width: 100px;
-    height: 100px;
-    transform-origin: center;
-    animation: rotate 2s linear infinite; */
-    /* position: relative; */
-    /* top: 50%;
-    left: 50%; 
-    transform: translate(-50%, -50%);
-    width: 100px;
-    height: 100px;
-    transform-origin: center center;
-    animation: rotate 2s linear infinite;
-    z-index: 9999;
-  }*/
-/* /*    */
-  
-  
-
   @keyframes slideshows {
     0% {
       transform: translateX(0%);
@@ -947,6 +945,12 @@ padding: 60px 0 0 0;
 .provide{
     width: 80%;
     margin: auto;
+}
+.gradient-text{
+    background: linear-gradient(90deg, black 35%, #ffd017 40%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .provide-content{
     width: 100%;
@@ -995,7 +999,7 @@ border-radius: 20px;
     background-color: white;
 }
 .ourmentor {
-    margin: 10% auto;
+    margin: 20% auto;
 width: 80%;
 box-shadow: 10px 2px 36px 4px #272f20;
 }
@@ -1005,6 +1009,7 @@ box-shadow: 10px 2px 36px 4px #272f20;
 .ourmentor p{
     width:100%;
     margin:auto;
+    padding: 15px;
     font-size:30px;
     font-weight:bold
 }
@@ -1051,7 +1056,57 @@ box-shadow: 7px 20px 31px 6px #f4e612;
     transform: scale(1.2,1.1);
 }
 
-
+/* Course Benefits */
+.course-benefit
+{
+    width: 90%;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 10px 5px 19px 1px #d9ce2a;
+}
+.course-benefit .img{
+    width: 80%;
+    margin: auto;
+}
+.course-benefit .img img{
+    width: 50%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    border-radius: 50%;
+}
+.benefits{
+    padding: 20px;
+}
+@media only screen and (min-width:800px)
+{
+    .course-benefit{
+        display: flex;
+    }
+    .course-benefit .img img{
+        width: 124%;
+height: 444px;
+margin: auto;
+    }
+}
+@media only screen and (max-width:400px)
+{
+    .blocks b{
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width:310px)
+{
+    .blocks b{
+        font-size: 15px;
+    }
+    .blocks p{
+        font-size: 12px;
+    }
+    .blocks img{
+        height: 50px;
+    }
+}
 
 /* Responsive index.hbs */
 @media only screen and (max-width:1075px){
@@ -1207,10 +1262,6 @@ box-shadow: 7px 20px 31px 6px #f4e612;
         width: 100%;
         height: auto;
     }
-    /* .extra .img img{
-        width: 70%;
-        box-shadow: 7px 26px 31px 6px #f4e612;
-    } */
     .extra .info-3{
         width: 100%;
         text-align: center;
@@ -1365,7 +1416,7 @@ box-shadow: 7px 20px 31px 6px #f4e612;
         transform: none;
     }
     .extra .img img{
-        width: 66%;
+        width: 36%;
         height: 250px;
     }
     .review-slider:hover{
@@ -1432,7 +1483,7 @@ box-shadow: 7px 20px 31px 6px #f4e612;
    
    .number p{
     margin: 0 5px;
-    font-size: 10px;
+    font-size: 25px;
    }
    .number h1{
     text-align: center;
@@ -1496,6 +1547,10 @@ color: blue;
 }
 .container .img img:first-child{
     width: 100%;
+}
+.extra .img img{
+    width: 60%;
+    margin-bottom:10% ;
 }
 
 }
