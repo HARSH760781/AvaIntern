@@ -330,6 +330,9 @@ border-radius: 20px;
     color: black;
     font-weight: bolder;
 }
+.info-2  a{
+    text-align: center;
+}
 .info-3:hover{
     transform: scale(1.1,1.1);
 }
@@ -364,7 +367,7 @@ border-radius: 20px;
     margin-top: 5%;
     padding: 5% 0;
     color: wheat;
-    background:rgb(54, 34, 34);
+    background: rgb(162, 117, 117);
     display: flex;
     justify-content: space-evenly;
 }
@@ -694,6 +697,7 @@ background: rgb(240, 228, 240);
     margin:10% auto;
   }
   .partners p{
+    text-align: center;
     font-size: 50px;
     margin: 5% auto;
   }
@@ -992,12 +996,17 @@ border-radius: 20px;
 }
 .ourmentor {
     margin: 10% auto;
+width: 80%;
+box-shadow: 10px 2px 36px 4px #272f20;
 }
 .ourmentor hr{
     width: 60%;
 }
 .ourmentor p{
-    width:80%;margin:auto;font-size:30px;font-weight:bold
+    width:100%;
+    margin:auto;
+    font-size:30px;
+    font-weight:bold
 }
 .info-3 .btn{
     width: 25%;
@@ -1206,19 +1215,6 @@ box-shadow: 7px 20px 31px 6px #f4e612;
         width: 100%;
         text-align: center;
     }
-    /* .blog .cards{
-        display: flex;
-        flex-direction: column;
-    }
-    .blog .cards .card{
-        width: 50%;
-        margin: 10px auto;
-        text-align: center;
-        justify-content: center;
-    }
-    .blog .cards .card img{
-        height: 300px;
-    } */
 
     .mentor {
         width: 80%;
@@ -1229,6 +1225,9 @@ box-shadow: 7px 20px 31px 6px #f4e612;
     }
     footer h1{
         font-size:20px ;
+    }
+    .c1 p{
+        font-size: 15px;
     }
 }
 @media only screen and (max-width:652px){
@@ -1371,6 +1370,10 @@ box-shadow: 7px 20px 31px 6px #f4e612;
     }
     .review-slider:hover{
         transform: none;
+    }
+    .partners img{
+        height: 50px;
+        width: 42px;
     }
 }
 @media only screen and (max-width:438px)
