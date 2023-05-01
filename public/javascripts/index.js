@@ -81,7 +81,7 @@ window.addEventListener("scroll", function () {
     }
     const intervalId1 = setInterval(incrementCounter1, 4);
     let x = counter1.innerHTML;
-    console.log(x);
+    // console.log(x);
     let counter3 = document.querySelector(".counter3");
     let targetNumber3 = 35000;
     let currentNumber3 = 700;
@@ -196,16 +196,54 @@ function showNextImage() {
 
 setInterval(showNextImage, 3000);
 // *************slider********
-const slidesho = document.getElementById("slidesho");
-const imag = slidesho.getElementsByTagName("img");
-let currentImageInde = 0;
+// const slidesho = document.getElementById("slidesho");
+// const imag = slidesho.getElementsByTagName("img");
+// let currentImageInde = 0;
 
-function showNextImag() {
-  imag[currentImageInde].style.display = "none";
-  currentImageInde = (currentImageInde + 1) % imag.length;
-  imag[currentImageInde].style.display = "block";
-}
+// function showNextImag() {
+//   imag[currentImageInde].style.display = "none";
+//   currentImageInde = (currentImageInde + 1) % imag.length;
+//   imag[currentImageInde].style.display = "block";
+// }
 
-setInterval(showNextImag, 3000);
+// setInterval(showNextImag, 3000);
 
 // ********************************
+
+// ******************Facility slider**********************//
+
+const containers = document.querySelector(".facility");
+const imageWrapper = document.querySelector(".image-wrapper");
+const images = document.querySelectorAll(".image-wrapper img");
+const leftButton = document.querySelector("#left-button");
+const rightButton = document.querySelector("#right-button");
+
+let currentIndex = 0;
+let animating = false;
+
+leftButton.addEventListener("click", () => {
+  if (!animating) {
+    animating = true;
+    currentIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
+    imageWrapper.style.transform = `translateX(-${
+      currentIndex * containers.clientWidth
+    }px)`;
+    setTimeout(() => {
+      animating = false;
+    }, 500);
+  }
+});
+
+rightButton.addEventListener("click", () => {
+  // console.log("hello");
+  if (!animating) {
+    animating = true;
+    currentIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1;
+    imageWrapper.style.transform = `translateX(-${
+      currentIndex * containers.clientWidth
+    }px)`;
+    setTimeout(() => {
+      animating = false;
+    }, 500);
+  }
+});

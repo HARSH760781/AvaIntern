@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Image Slider</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        .container {
+            width: 400px;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .image-wrapper {
+            display: flex;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        img {
+            width: 400px;
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="image-wrapper">
+            <img src="//images.ctfassets.net/yadj1kx9rmg0/wtrHxeu3zEoEce2MokCSi/cf6f68efdcf625fdc060607df0f3baef/quwowooybuqbl6ntboz3.jpg"
+                alt="Photo 1">
+            <img src="photo2.jpg" alt="Photo 2">
+            <i class="fa-duotone fa-graduation-cap fa-beat-fade"></i>
+            <img src="photo3.jpg" alt="Photo 3">
+            <img src="photo4.jpg" alt="Photo 4">
+        </div>
+    </div>
+    <button id="left-button">Scroll Left</button>
+    <button id="right-button">Scroll Right</button>
+    <script>
+        const container = document.querySelector('.container');
+        const imageWrapper = document.querySelector('.image-wrapper');
+        const images = document.querySelectorAll('.image-wrapper img');
+        const leftButton = document.querySelector('#left-button');
+        const rightButton = document.querySelector('#right-button');
+
+        let currentIndex = 0;
+        let animating = false;
+
+        leftButton.addEventListener('click', () => {
+            if (!animating) {
+                animating = true;
+                currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+                imageWrapper.style.transform = `translateX(-${currentIndex * container.clientWidth}px)`;
+                setTimeout(() => {
+                    animating = false;
+                }, 500);
+            }
+        });
+
+        rightButton.addEventListener('click', () => {
+            if (!animating) {
+                animating = true;
+                currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+                imageWrapper.style.transform = `translateX(-${currentIndex * container.clientWidth}px)`;
+                setTimeout(() => {
+                    animating = false;
+                }, 500);
+            }
+        });
+
+    </script>
+</body>
+
+</html>

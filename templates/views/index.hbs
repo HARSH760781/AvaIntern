@@ -2,45 +2,45 @@
 <html lang="en">
 
 {{>head}}
+
 <body>
-  {{>header}}
+    {{>header}}
     <main>
         <div class="container my-3">
             <img src="bgg.jpg" alt="">
         </div>
-            <div class="content">
-                <p>Learn without limits and spread knowledge</p>
-                <p class="basic-info">Build new skills for that "this is my year" feeling with
+        {{>scroll}}
+        <div class="content">
+            <p>Learn without limits and spread knowledge</p>
+            <p class="basic-info">Build new skills for that "this is my year" feeling with
 
-                    courses,certificates, and degrees from world-class
+                courses,certificates, and degrees from world-class
 
-                    universities and companies
-                </p>
-                <div class="some-btn" style="display: flex;justify-content: space-around;margin-top: 5%;">
-                    <button type="button" class="btn btn-warning"><b><a
-                                href="/course"> See Courses</a></b></button>
-                    <button type="button" class="btn btn-warning" style="color:black;"
-                        ><b>Watch Video</b></button>
-                </div>
-                
+                universities and companies
+            </p>
+            <div class="some-btn" style="display: flex;justify-content: space-around;margin-top: 5%;">
+                <button type="button" class="btn btn-warning"><b><a href="/course"> See Courses</a></b></button>
+                <button type="button" class="btn btn-warning" style="color:black;"><b>Watch Video</b></button>
             </div>
-       
-<div class="slider">
-  <div class="slider-container">
-    <div class="slide"><img src="motivate-1.jpg"></div>
-    <div class="slide"><img src="motivate-3.jpg"></div>
-    <div class="slide"><img src="motivate-2.avif"></div>
-    <div class="slide"><img src="motivation-3.avif"></div>
-    <div class="slide"><img src="motivate.jpg"></div>
-  </div>
-  <div class="pagination"></div>
-</div>
 
-<div class="partners">
-    <marquee behavior="alternate" width="100%" direction="right">
-            <p><b>Our Alumuni Works at</b></p>
-    </marquee>
-            <marquee behavior="scroll" direction="left" scrollamount="20">
+        </div>
+
+        <div class="slider">
+            <div class="slider-container">
+                <div class="slide"><img src="motivate-1.jpg"></div>
+                <div class="slide"><img src="motivate-3.jpg"></div>
+                <div class="slide"><img src="motivate-2.avif"></div>
+                <div class="slide"><img src="motivation-3.avif"></div>
+                <div class="slide"><img src="motivate.jpg"></div>
+            </div>
+            <div class="pagination"></div>
+        </div>
+
+        <div class="partners">
+            <marquee behavior="alternate" direction="right">
+                <p><b>Our Alumuni Works at</b></p>
+            </marquee>
+            <marquee behavior="scroll" direction="left" scrollamount="10">
                 <img src="amazon.png" alt="">
                 <img src="tcs.png" alt="">
                 <img src="autodesk.png" alt="">
@@ -55,133 +55,138 @@
             <div class="info-2">
                 <marquee behavior="alternate" direction="left">
                     <a style="text-decoration: none;color:black;" href="/course">
-                <h1 style="text-align: center;"><b> Our Popular Courses </b> </h1>
-                <p>Build new skills with new trendy courses and shine
-                    for the next future career</p>
+                        <h1><b> Our Popular Courses </b> </h1>
                     </a>
-                    </marquee>
+                </marquee>
+                <div class="btn btn-warning py-3 my-2 mx-1"><a href="/course">Explore courses</a></div>
             </div>
             <div class="multiple-cards">
-            <div class="cards">
-                <div class="card" >
-                    <img src="/bg-courses/web.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h4><b> Full Stack Web Design</b></h4>
-                        <p class="card-text">Web development allows you to build attractive, engaging, and robust websites.</p>
-                        <div class="price" style="display: flex;justify-content: space-between;">
-                            {{!-- <p><b> &#x20b9; 6999</b></p> --}}
-                            <button type="button" class="btn btn-warning"><b><a href="/course/web"> Web Design</a></b></button>
+                <div class="cards">
+                    <div class="card">
+                        <img src="/bg-courses/web.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h4><b> Full Stack Web Design</b></h4>
+                            <p class="card-text">Web development allows you to build attractive, engaging, and robust
+                                websites.</p>
+                            <div class="price" style="display: flex;justify-content: space-between;">
+                                {{!-- <p><b> &#x20b9; 6999</b></p> --}}
+                                <button type="button" class="btn btn-warning"><b><a href="/course/web"> Web
+                                            Design</a></b></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="/bg-courses/dsa.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h4><b> Data Structure and Algorithms</b></h4>
+                            <p class="card-text">DSA course will you allows to use efficient ways to solve problems.
+                            </p>
+                            <div class="price" style="display: flex;justify-content: space-between;">
+                                {{!-- <p><b> &#x20b9; 6999</b></p> --}}
+                                <button type="button" class="btn btn-warning"><b><a href="/course/dsa"> DSA
+                                        </a></b></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="/courses/human.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h4><b> Human Resources</b></h4>
+                            <p class="card-text">Human resources provides support and management of an organization's
+                                workforce.</p>
+                            <div class="price" style="display: flex;justify-content: space-between;">
+                                {{!-- <p><b> &#x20b9; 6999</b></p> --}}
+                                <button type="button" class="btn btn-warning"><b><a href="/course/human"> Human Resource
+                                        </a></b></button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="card" >
-                    <img src="/bg-courses/dsa.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h4><b>  Data Structure and Algorithms</b></h4>
-                        <p class="card-text">DSA course will you allows to use efficient ways to solve problems.  </p>
-                        <div class="price" style="display: flex;justify-content: space-between;">
-                            {{!-- <p><b> &#x20b9; 6999</b></p> --}}
-                            <button type="button" class="btn btn-warning"><b><a href="/course/dsa"> DSA </a></b></button>
+                <div class="cards">
+                    <div class="card">
+                        <img src="/courses/ui-ux.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h4><b> UI/UX Design</b></h4>
+                            <p class="card-text">UI/UX provides intuitive and appealing design for user-friendly and
+                                delightful user experience.</p>
+                            <div class="price" style="display: flex;justify-content: space-between;">
+                                {{!-- <p><b> &#x20b9; 6999</b></p> --}}
+                                <button type="button" class="btn btn-warning"><b><a href="/course/ui-ux"> UI/UX
+                                        </a></b></button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card" >
-                    <img src="/courses/human.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h4><b> Human Resources</b></h4>
-                        <p class="card-text">Human resources provides support and management of an organization's workforce.</p>
-                        <div class="price" style="display: flex;justify-content: space-between;">
-                            {{!-- <p><b> &#x20b9; 6999</b></p> --}}
-                            <button type="button" class="btn btn-warning"><b><a href="/course/human"> Human Resource </a></b></button>
+                    <div class="card">
+                        <img src="/bg-courses/marketing.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h4><b>Digital Marketing</b></h4>
+                            <p class="card-text">Promotes brand, products or services to target audience to achieve
+                                business goals.</p>
+                            <div class="price" style="display: flex;justify-content: space-between;">
+                                {{!-- <p><b> &#x20b9; 6999</b></p> --}}
+                                <button type="button" class="btn btn-warning"><b><a href="/course/marketing"> Digital
+                                            Marketing</a></b></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="/bg-courses/ds.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h4><b> Data Science</b></h4>
+                            <p class="card-text">Data science provides solutions by analyzing data using statistical and
+                                computational methods</p>
+                            <div class="price" style="display: flex;justify-content: space-between;">
+                                {{!-- <p><b> &#x20b9; 6999</b></p> --}}
+                                <button type="button" class="btn btn-warning"><b><a href="/course/ds"> Data
+                                            Science</a></b></button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="cards">
-                <div class="card" >
-                    <img src="/courses/ui-ux.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h4><b> UI/UX Design</b></h4>
-                        <p class="card-text">UI/UX provides intuitive and appealing design for user-friendly and delightful user experience.</p>
-                        <div class="price" style="display: flex;justify-content: space-between;">
-                            {{!-- <p><b> &#x20b9; 6999</b></p> --}}
-                            <button type="button" class="btn btn-warning"><b><a href="/course/ui-ux"> UI/UX </a></b></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card" >
-                    <img src="/bg-courses/marketing.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h4><b>Digital Marketing</b></h4>
-                        <p class="card-text">Promotes brand, products or services to target audience to achieve business goals.</p>
-                        <div class="price" style="display: flex;justify-content: space-between;">
-                            {{!-- <p><b> &#x20b9; 6999</b></p> --}}
-                            <button type="button" class="btn btn-warning"><b><a href="/course/marketing"> Digital Marketing</a></b></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card" >
-                    <img src="/bg-courses/ds.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h4><b> Data Science</b></h4>
-                        <p class="card-text">Data science provides solutions by analyzing data using statistical and computational methods</p>
-                        <div class="price" style="display: flex;justify-content: space-between;">
-                            {{!-- <p><b> &#x20b9; 6999</b></p> --}}
-                            <button type="button" class="btn btn-warning"><b><a href="/course/ds"> Data Science</a></b></button>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                </div>
-            </div>
+        </div>
         </div>
         <div class="whychooseus">
             <img src="/why.jpg" alt="">
             <div class="moto">
-            <p class="heading">
-               <marquee behavior="alternate" direction="left" scrollamount="3px"> Why Choose Us ?</marquee></p>
-            <p>Ava Intern is a rapidly growing training innovation
-                company that provides a significant number of elearning
-                arrangements for the global market under one
-                roof. Our organization has been created with the aim of
-                assisting individuals in realizing their full potential by
-                providing entirely flexible, top-to-bottom, and
-                comprehensive learning opportunities. The best
-                learning benefits which make us different from others
-                are our project based tasks along with internship
-                experiences which students get while doing the courses.</p>
+                <p class="heading">
+                    <marquee behavior="alternate" direction="left" scrollamount="3px"> Why Choose Us ?</marquee>
+                </p>
+                <p>Ava Intern is a rapidly growing training innovation
+                    company that provides a significant number of elearning
+                    arrangements for the global market under one
+                    roof. Our organization has been created with the aim of
+                    assisting individuals in realizing their full potential by
+                    providing entirely flexible, top-to-bottom, and
+                    comprehensive learning opportunities. The best
+                    learning benefits which make us different from others
+                    are our project based tasks along with internship
+                    experiences which students get while doing the courses.</p>
+            </div>
+        </div>
+
+        {{!-- Scroll features for facility--}}
+
+        <marquee behavior="scroll" direction="left">
+            <b class="facility-heading"> The Optimal Platform for Beginning Your Career Journey.</b>
+        </marquee>
+        <div class="facility">
+            <div class="image-wrapper">
+                <a href="/placement"><img src="graduation.avif" alt="1">Placement Cell</a>
+                <a href="#"><img src="certificate.avif" alt="2">Certification</a>
+                <a href="#"><img src="industry.avif" alt="3">Industial Experience</a>
+                <a href="/course"><img src="book.avif" alt="4">Courses</a>
+            </div>
         </div>
         </div>
-
-{{!-- 
-        <div class="review-slider">
-            <div class="slider-container">
-            <div class="review-slide">
-                <h3>Review 1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dapibus tellus non sapien pharetra, sit amet vulputate lorem eleifend.</p>
-                <div class="rating">4.5</div>
-            </div>
-            <div class="review-slide">
-                <h3>Review 2</h3>
-                <p>Sed dictum odio a leo bibendum ullamcorper. Nunc sed maximus elit. Fusce consectetur quam vitae semper eleifend.</p>
-                <div class="rating">3.7</div>
-            </div>
-            <div class="review-slide">
-                <h3>Review 3</h3>
-                <p>Vivamus vitae tortor sit amet felis ultrices rhoncus. Etiam lacinia ut nibh non ultricies. Nam ut massa vel mauris tristique pellentesque.</p>
-                <div class="rating">5.0</div>
-            </div>
-            </div>
-            <div class="slider-pagination">
-            <span class="pagination-dot active"></span>
-            <span class="pagination-dot"></span>
-            <span class="pagination-dot"></span>
-            </div>
-            </div> --}}
-
-
-
-
+        <div class="buttons">
+            <button class="btn btn-warning mx-3 my-3 " id="left-button"><b><b><span style="font-weight: bold;">
+                            < </span> </b>
+                </b> </button>
+            <button id="right-button" class="btn btn-warning mx-3 my-3 "><b><b>
+                        > </b>
+                </b></button>
+        </div>
         <div class="thoughts">
             <div class="author">
                 <img src="peter.png" alt="Loading...">
@@ -190,40 +195,52 @@
             </div>
             <div class="thought-author">
                 <h2><q> Success is not final, failure is not fatal: it is the courage to continue that counts.
-                    Believe you can and you're halfway there</q></h2>
+                        Believe you can and you're halfway there</q></h2>
             </div>
         </div>
 
         <div class="review-slider">
             <h1>Some Earning from our students.</h1>
-  <div class="reviews">
-    <div class="review active">
-      <p class="text">I recently completed a course with you and I have to say, it was one of the best learning experiences I've ever had. The course material was so well-organized and easy to understand, and the instructors were incredibly knowledgeable and supportive.</p>
-      <div class="rating">4.5 &#11088;</div>
-      <p class="author">Rahul Suman</p>
-    </div>
-    <div class="review">
-      <p class="text">"I just completed your course and I wanted to reach out and say thank you. Your dedication to providing the highest-quality education and support is truly inspiring. The material was well-organized and easy to follow, and the instructors were knowledgeable, patient, and understanding. I feel like I've gained so much from this experience and I'm excited to apply my new skills to my work."</p>
-      <div class="rating">3.8 &#11088;</div>
-      <p class="author">Mukesh Yadav</p>
-    </div>
-    <div class="review">
-      <p class="text">"I can't say enough good things about your course. From the moment I signed up, I felt like I was in good hands. The support team was responsive and helpful, and the instructors were top-notch. The content was challenging but engaging, and I feel like I've grown so much as a learner as a result. Thank you for all the hard work and dedication that went into creating this course."</p>
-      <div class="rating">4.2 &#11088;</div>
-      <p class="author">Ranjeet Yadav</p>
-    </div>
-  </div>
-  <div class="pagination">
-    <button class="page-btn active"></button>
-    <button class="page-btn"></button>
-    <button class="page-btn"></button>
-  </div>
+            <div class="reviews">
+                <div class="review active">
+                    <p class="text">I recently completed a course with you and I have to say, it was one of the best
+                        learning experiences I've ever had. The course material was so well-organized and easy to
+                        understand, and the instructors were incredibly knowledgeable and supportive.</p>
+                    <div class="rating">4.5 &#11088;</div>
+                    <p class="author">Rahul Suman</p>
+                </div>
+                <div class="review">
+                    <p class="text">"I just completed your course and I wanted to reach out and say thank you. Your
+                        dedication to providing the highest-quality education and support is truly inspiring. The
+                        material was well-organized and easy to follow, and the instructors were knowledgeable, patient,
+                        and understanding. I feel like I've gained so much from this experience and I'm excited to apply
+                        my new skills to my work."</p>
+                    <div class="rating">3.8 &#11088;</div>
+                    <p class="author">Mukesh Yadav</p>
+                </div>
+                <div class="review">
+                    <p class="text">"I can't say enough good things about your course. From the moment I signed up, I
+                        felt like I was in good hands. The support team was responsive and helpful, and the instructors
+                        were top-notch. The content was challenging but engaging, and I feel like I've grown so much as
+                        a learner as a result. Thank you for all the hard work and dedication that went into creating
+                        this course."</p>
+                    <div class="rating">4.2 &#11088;</div>
+                    <p class="author">Ranjeet Yadav</p>
+                </div>
+            </div>
+            <div class="pagination">
+                <button class="page-btn active"></button>
+                <button class="page-btn"></button>
+                <button class="page-btn"></button>
+            </div>
         </div>
 
 
         <div class="extra">
             <div class="img">
-                {{!-- <img src="p3.jpg" style="position: relative;top: 30px;margin: 4px;width:45%;height:95%;border-radius:10px;" alt="Loading..."> --}}
+                {{!-- <img src="p3.jpg"
+                    style="position: relative;top: 30px;margin: 4px;width:45%;height:95%;border-radius:10px;"
+                    alt="Loading..."> --}}
                 <img src="p2.png" alt="Loading...">
             </div>
             <div class="info-3">
@@ -232,71 +249,83 @@
                 <p>Receive support and guidance from mentors throughout your learning journey</p>
                 <p>
                     <br>
-                    Lesson impact Report</p>
+                    Lesson impact Report
+                </p>
 
-                <button type="button" class="btn btn-dark"><b><a href="/signup"> Sign
-                        Up</a></b></button>
+                <button type="button" class="btn btn-warning"><b><a href="/signup"> Sign
+                            Up</a></b></button>
 
             </div>
         </div>
 
 
-<div id="slideshow">
-  <img src="plan-1.jpg">
-  <img src="plan-2.jpg">
-  <img src="plan-3.jpg">
-  <img src="plan-4.jpg">
-</div>
+        <div id="slideshow">
+            <img src="plan-1.jpg">
+            <img src="plan-2.jpg">
+            <img src="plan-3.jpg">
+            <img src="plan-4.jpg">
+        </div>
 
-        
+
         <div class="ourmentor">
             <h1 style="text-align: center;color:rgb(247, 83, 54);font-size:50px"><b><b>Our Mentor</b></b></h1>
-            <hr><hr><hr>
+            <hr>
+            <hr>
+            <hr>
             <br>
             <div class="mentor">
-                <p> Our Mentors at Ava Intern are industry experts who bring years of experience and valuable insight to the classroom. They adopt a personalized approach to suit every student’s needs, accentuating the strengths and addressing any weaknesses. Our mentors encourage active participation in class by encouraging questions and offering feedback after every lecture. We believe that by the end of your course you will have not only the theoretical understanding but an excellent proficiency in skills required to succeed in your field. </p></div>
+                <p> Our Mentors at Ava Intern are industry experts who bring years of experience and valuable insight to
+                    the classroom. They adopt a personalized approach to suit every student’s needs, accentuating the
+                    strengths and addressing any weaknesses. Our mentors encourage active participation in class by
+                    encouraging questions and offering feedback after every lecture. We believe that by the end of your
+                    course you will have not only the theoretical understanding but an excellent proficiency in skills
+                    required to succeed in your field. </p>
+            </div>
             <br>
         </div>
         <div class="provide">
             <div class="provide-content">
-            <p>We are dedicated to enriching your knowledge through our platform. <span class="gradient-text">AvaIntern</span></p>
-            <div class="img">
-            <img src="/girl-1.png" alt="">
-            </div>
+                <p>We are dedicated to enriching your knowledge through our platform. <span
+                        class="gradient-text">AvaIntern</span></p>
+                <div class="img">
+                    <img src="/girl-1.png" alt="">
+                </div>
             </div>
         </div>
         <div class="about">
             <h1 style="text-align: center;"><b><b>About Us</b></b></h1>
-            <hr><hr><hr>
+            <hr>
+            <hr>
+            <hr>
             <li>Ava Intern is an Online learning platform
-            that provides students a holistic learning
-            experience to help make them industryready.</li>
+                that provides students a holistic learning
+                experience to help make them industryready.</li>
             <li>With access to the Industry Experts, Online
                 Courses and blended learning, it allows
                 students to Learn beyond Expectations.</li>
-                <li>AvaIntern bridge the gap between classroom
-                    and workplace with our flagship Training -
-                    cum- Internship Programs.</li>
+            <li>AvaIntern bridge the gap between classroom
+                and workplace with our flagship Training -
+                cum- Internship Programs.</li>
         </div>
-        
+
         <div class="number">
             <div class="1">
                 <h1 class="counter1">10000</h1>
                 <p>Enrollment</p>
             </div>
-             <div class="2">
+            <div class="2">
                 <h1 class="counter2">500</h1>
-            <p>Project Reviews</p>
+                <p>Project Reviews</p>
             </div>
-             <div class="3">
+            <div class="3">
                 <h1 class="counter3">35000 <span></span></h1>
-            <p>Viewers</p>
+                <p>Viewers</p>
             </div>
         </div>
     </main>
-   {{>footer}}
-   <script  src="index.js">
-   </script>
+    {{>footer}}
+    <script src="index.js">
+    </script>
 
 </body>
 
