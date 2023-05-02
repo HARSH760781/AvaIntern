@@ -510,8 +510,8 @@ border-radius: 20px;
         font-size: 20px;
     }
     .talk img{
-        width: 40%;
-        margin: auto 0;
+        width: 80%;
+        margin: auto;
     }
     .talk-body .btn{
         width: 125px;
@@ -621,7 +621,7 @@ margin: 5% auto;
     }
     .links a img{
         width: 100%;
-        height: auto;
+height: 60px;
     }
 
     footer h1{
@@ -659,14 +659,16 @@ margin: 5% auto;
     color: red;
 }
 .certificates{
-    width: 75%;
+    width: 85%;
 margin: 5% auto;
 display: flex;
-padding: 2%;
-background: rgb(240, 228, 240);
+flex-direction: column;
+border: 5px solid whitesmoke;
+box-shadow: 8px 12px 22px 14px #cbba78;;
 }
 .certificates .card{
     width: auto;
+    margin: 2% auto;
 }
 .certificates .card img{
     opacity: 1;
@@ -1005,12 +1007,13 @@ padding: 60px 0 0 0;
 /* Pricing */
 .pricing{
     width: 80%;
-    margin: auto;
+    margin: 20% auto;
     background: rgb(242, 239, 234);
     padding: 20px;
     text-align:center;
 border: 5px solid black;
 border-radius: 20px;
+box-shadow: 5px 10px 10px 10px;
 }
 .pricing ul{
     text-align: start;
@@ -1623,6 +1626,10 @@ color: blue;
         border-radius: 20px;
         font-size: 7px;
     }
+    .section b{
+        font-size: 17px;
+    }
+
     .navbar-toggler{
         padding: 0;
     }
@@ -1783,6 +1790,15 @@ width: 98px;
         width: 0.7em;
         height: 0.7em;
       }
+      .overview p{
+        font-size: 10px;
+      }
+      .overview h1 b b{
+        font-size: 15px;
+      }
+      .overview ol li{
+        font-size: 10px;
+      }
 }
 /* Career responsive */
 @media only screen and (max-width:770px)
@@ -1920,7 +1936,7 @@ width: 98px;
 {
     .certificates .card img{
         width: 80%;
-        height: 25%;
+        height: auto;
         margin: auto;
     }
     .overview ol li,p{
@@ -1940,7 +1956,7 @@ width: 98px;
     }
     
 }
-@media only screen and (max-width:500px)
+@media only screen and (max-width:600px)
 {
     .certificates{
         display: flex;
