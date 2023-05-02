@@ -141,7 +141,7 @@ background-image: url('bgg.jpg');
 }
 .container .images{
     width: 100%;
-    height: 250px;
+    height: 400px;
     margin: 15% auto 0 auto;
 
 }
@@ -492,6 +492,7 @@ border-radius: 20px;
     .top img{
         width: 100%;
         height: 400px;
+        margin: 20% auto 2% auto;
     }
     .talk{
         background: rgb(223, 161, 161);
@@ -1128,9 +1129,8 @@ box-shadow: 7px 20px 31px 6px #f4e612;
     .blocks p{
         font-size: 12px;
     }
-    .blocks img{
-        height: 50px;
-    }
+    /* 
+    */
 }
 
 /* Responsive index.hbs */
@@ -1317,6 +1317,10 @@ box-shadow: 7px 20px 31px 6px #f4e612;
         border-radius: 5px;
         margin: auto;
       }
+      .blocks img{
+        width: auto;
+        height: 70px;
+    }
 
     .about h1{
         font-size: 25px;
@@ -1422,6 +1426,9 @@ box-shadow: 7px 20px 31px 6px #f4e612;
     .moto .heading{
         font-size: 39px;
     }
+    .container.images{
+        height: 250px;
+    }
     .whychooseus img{
         height: 20rem;
     }
@@ -1460,6 +1467,10 @@ box-shadow: 7px 20px 31px 6px #f4e612;
     .para{
         font-size: 20px;
     }
+    .blocks img{
+        width: 30%;
+        height: 70px;
+    }
     .container .images{
         margin: 35% auto 0 auto;
         height: 170px;
@@ -1491,6 +1502,7 @@ box-shadow: 7px 20px 31px 6px #f4e612;
         font-size: 13px;
         font-weight: none;
     }
+    
     .content .btn{
         width: 30%;
     }
@@ -1595,6 +1607,10 @@ color: blue;
     }
     .navbar-toggler{
         padding: 0;
+    }
+    .blocks img{
+        width: 30%;
+        height: 70px;
     }
     .traineeship b{
         font-size: 15px;
@@ -1782,6 +1798,7 @@ width: 98px;
         width: 100%;
         margin: auto;
         height: 200px;
+        
     }
 }
 
@@ -1852,6 +1869,10 @@ width: 98px;
     .cards-level .cards{
         flex-direction: column;
     }
+    .blocks img{
+        width: auto;
+        height: 70px;
+    }
     .cards-level .cards .card{
         width: 85%;
         margin: 10% auto;
@@ -1915,6 +1936,10 @@ width: 98px;
     }
     .course-details ul{
         font-size: 12px;
+    }
+    .blocks img{
+        width: 30%;
+        height: 70px;
     }
 }
 
