@@ -356,6 +356,9 @@ color: rgb(27, 11, 11);
       left: calc(100% - 50px); 
     }
   }
+  form .btn{
+    width: auto;
+  }
   
 .info-3{
     margin-top: 10%;
@@ -531,7 +534,12 @@ border-radius: 20px;
         margin: 5% 5px;
         font-size: 30px;
 text-align: start;
-
+    }
+    @media only screen and(max-width:600px)
+    {
+        .top img{
+            margin: 30% auto 3% auto;
+        }
     }
     /* About */
     .banner{
@@ -567,6 +575,8 @@ margin: 5% auto;
         width: 100%;
         opacity: 0.2;
         z-index: 1;
+        margin: 20% auto 0 auto;
+
         /* height: 105%; */
     }
     .address{
@@ -611,7 +621,7 @@ margin: 5% auto;
     }
     .links a img{
         width: 100%;
-        height: 50px;
+        height: auto;
     }
 
     footer h1{
@@ -654,6 +664,9 @@ margin: 5% auto;
 display: flex;
 padding: 2%;
 background: rgb(240, 228, 240);
+}
+.certificates .card{
+    width: auto;
 }
 .certificates .card img{
     opacity: 1;
@@ -1475,6 +1488,11 @@ box-shadow: 7px 20px 31px 6px #f4e612;
         margin: 35% auto 0 auto;
         height: 170px;
     }
+    .container img{
+        height: 200px;
+        margin: 30% auto auto;
+
+    }
     .card-text{
         font-size: 15px;
     }
@@ -1625,6 +1643,9 @@ color: blue;
     }
     .info-3{
         font-weight: normal;
+    }
+    .top h1{
+        font-size: 20px;
     }
     .info-3 h2{
         font-size: 20px;
@@ -1850,7 +1871,8 @@ width: 98px;
         font-size:30px;
     }
     .links a img{
-        height: 25px;   
+        height: 35px;
+        width: auto;   
     }
 }
 
@@ -1878,7 +1900,8 @@ width: 98px;
         margin: 10% auto;
     }
     .container img{
-        height: 300px;
+        height: auto;
+        margin: 20% auto auto;
     }
     .container .imgage
     {
@@ -1916,6 +1939,13 @@ width: 98px;
         font-size: 17px;
     }
     
+}
+@media only screen and (max-width:500px)
+{
+    .certificates{
+        display: flex;
+        flex-direction: column;
+    }
 }
 @media only screen and (max-width:370px)
 {
