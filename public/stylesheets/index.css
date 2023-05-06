@@ -636,7 +636,7 @@ height: 60px;
     text-align: center;
 }
 .section img{
-    margin: 20px;
+    margin: 15% 20px;
     width: 100%;
 }
 .course-details{
@@ -1617,6 +1617,12 @@ color: blue;
     width: 60%;
     margin-bottom:10% ;
 }
+.container .section img{
+    margin: 40% auto auto;
+}
+.section b{
+    font-size: 17px;
+}
 
 }
 @media only screen and (max-width:332px){
@@ -1626,10 +1632,8 @@ color: blue;
         border-radius: 20px;
         font-size: 7px;
     }
-    .section b{
-        font-size: 17px;
-    }
-
+    
+   
     .navbar-toggler{
         padding: 0;
     }
@@ -1923,6 +1927,7 @@ width: 98px;
     {
         height: 250px;
     }
+    
 }
 @media only screen and (max-width:400px)
 {

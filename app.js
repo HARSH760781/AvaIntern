@@ -5,6 +5,7 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 var hbs = require("hbs");
+var favicon = require("serve-favicon");
 
 var app = express();
 const port = process.env.PORT || 8080;
@@ -17,7 +18,7 @@ hbs.registerPartials(partialsPath);
 app.use(express.static(path.join(__dirname, "./public/stylesheets")));
 app.use(express.static(path.join(__dirname, "./public/javascripts")));
 app.use(express.static(path.join(__dirname, "./public/images")));
-
+app.use(favicon(path.join(__dirname, "public", "favicon.ico")));
 // view engine setup
 app.set("views", templatePath);
 app.set("view engine", "hbs");
@@ -49,6 +50,18 @@ app.get("/course/marketing", (req, res) => {
 app.get("/course/web", (req, res) => {
   res.render("web");
 });
+app.get("/course/human", (req, res) => {
+  res.render("human");
+});
+app.get("/course/business", (req, res) => {
+  res.render("business");
+});
+app.get("/course/finance", (req, res) => {
+  res.render("finance");
+});
+// app.get("/course/business", (req, res) => {
+//   res.render("business");
+// });
 app.get("/contact", (req, res) => {
   res.render("contact");
 });
