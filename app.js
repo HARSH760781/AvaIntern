@@ -59,9 +59,12 @@ app.get("/course/business", (req, res) => {
 app.get("/course/finance", (req, res) => {
   res.render("finance");
 });
-// app.get("/course/business", (req, res) => {
-//   res.render("business");
-// });
+app.get("/course/ui-ux", (req, res) => {
+  res.render("ux");
+});
+app.get("/course/dsa", (req, res) => {
+  res.render("dsa");
+});
 app.get("/contact", (req, res) => {
   res.render("contact");
 });
