@@ -6,6 +6,126 @@ var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 var hbs = require("hbs");
 var favicon = require("serve-favicon");
+var mongoose = require("mongoose");
+const flash = require("connect-flash");
+
+mongoose
+  .connect("mongodb://localhost:27017/avaintern", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log("Database Connected"))
+  .catch((err) => console.log(err));
+
+const courseScheme = new mongoose.Schema({
+  fullname: {
+    type: String,
+    required: true,
+    trim: true,
+    uppercase: true,
+  },
+  email: {
+    type: String,
+    required: true,
+    unique: true,
+    lowercase: true,
+    trim: true,
+    // validate: {
+    //   validator: function(v) {
+    //     return /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/.test(v);
+    //   },
+    //   message: 'Please enter a valid email address'
+    // }
+  },
+
+  course: {
+    type: String,
+  },
+  mobile: {
+    type: Number,
+    required: true,
+  },
+  college: {
+    type: String,
+  },
+  date: {
+    type: Date,
+    default: Date.now,
+  },
+});
+
+const signupSchema = new mongoose.Schema({
+  fullname: {
+    type: String,
+    required: true,
+    trim: true,
+  },
+  email: {
+    type: String,
+    required: true,
+    unique: true,
+    lowercase: true,
+    trim: true,
+    validate: {
+      validator: function (v) {
+        return /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/.test(v);
+      },
+      message: "Please enter a valid email address",
+    },
+  },
+  mobile: {
+    type: Number,
+    required: true,
+  },
+  password: {
+    type: String,
+    required: true,
+  },
+  college: {
+    type: String,
+    required: true,
+  },
+  date: {
+    type: Date,
+    default: Date.now,
+  },
+});
+const contactSchema = new mongoose.Schema({
+  fullname: {
+    type: String,
+    required: true,
+    trim: true,
+    uppercase: true,
+  },
+  email: {
+    type: String,
+    required: true,
+    unique: true,
+    lowercase: true,
+    trim: true,
+    validate: {
+      validator: function (v) {
+        return /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/.test(v);
+      },
+      message: "Please enter a valid email address",
+    },
+  },
+  mobile: {
+    type: Number,
+    required: true,
+  },
+  message: {
+    type: String,
+  },
+  date: {
+    type: Date,
+    default: Date.now,
+  },
+});
+
+const Course = new mongoose.model("Course", courseScheme);
+const Contact = new mongoose.model("Contact", contactSchema);
+const Signup = new mongoose.model("Signup", signupSchema);
 
 var app = express();
 const port = process.env.PORT || 8080;
@@ -18,13 +138,17 @@ hbs.registerPartials(partialsPath);
 app.use(express.static(path.join(__dirname, "./public/stylesheets")));
 app.use(express.static(path.join(__dirname, "./public/javascripts")));
 app.use(express.static(path.join(__dirname, "./public/images")));
-console.log(path.join(__dirname, "/public", "favicon.ico"));
 app.use(favicon(path.join(__dirname, "public", "favicon.ico")));
+app.use(express.json());
+app.use(express.urlencoded());
 // view engine setup
 app.set("views", templatePath);
 app.set("view engine", "hbs");
 
 app.get("/", (req, res) => {
+  res.render("index");
+});
+app.post("/", (req, res) => {
   res.render("index");
 });
 app.get("/faq", (req, res) => {
@@ -71,6 +195,42 @@ app.get("/contact", (req, res) => {
 });
 app.get("/signup", (req, res) => {
   res.render("signup");
+});
+
+app.post("/submit", (req, res) => {
+  var myData = new Course(req.body);
+  myData
+    .save()
+    .then(() => {
+      res.status(200).send("Your data is saved to the database...");
+      console.log(myData);
+    })
+    .catch(() => {
+      res.send("Your data has not been saved in the database.");
+    });
+});
+app.post("/contact", (req, res) => {
+  var myData = new Contact(req.body);
+  myData
+    .save()
+    .then(() => {
+      res.status(200).render("index");
+    })
+    .catch((err) => {
+      res.send('<script>alert("Enter a valid  Email Address");</script>');
+    });
+});
+app.post("/signup", (req, res) => {
+  var myData = new Signup(req.body);
+  myData
+    .save()
+    .then(() => {
+      res.send("Hello");
+      // res.status(200).render("index");
+    })
+    .catch((err) => {
+      res.send('<script>alert("Enter a valid  Email Address");</script>');
+    });
 });
 
 app.listen(8080, () => {

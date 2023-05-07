@@ -16,6 +16,9 @@
     background-color: white;
     --bs-bg-opacity: -1;
 }
+.signup-form{
+    margin: 20% auto auto;
+}
 .navbar-brand{
     font-family: 'Rubik Pixels', cursive;
     color: yellow
@@ -1631,6 +1634,9 @@ color: blue;
         height: 54px;
         border-radius: 20px;
         font-size: 7px;
+    }
+    .signup-form{
+        margin: 25% auto auto;
     }
     
    

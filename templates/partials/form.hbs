@@ -1,12 +1,23 @@
+<script>
+    function isNumberKey(evt) {
+        var charCode = (evt.which) ? evt.which : event.keyCode;
+        if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+            evt.preventDefault();
+            return false;
+        }
+        return true;
+    }
+</script>
 <div class="form">
-    <form>
+    <form action="/submit" method="POST">
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Name</label>
-            <input type="email" class="form-control">
+            <input type="text" class="form-control" name="fullname">
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp"
+                pattern="[a-zA-Z0-9._%+-]+@gmail\.com$" required>
             <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
         </div>
         <div class="mb-3">
@@ -26,11 +37,12 @@
         </div>
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Phone Number</label>
-            <input type="tel" class="form-control">
+            <input type="tel" class="form-control" name="mobile" pattern="[0-9]{10}"
+                onkeypress="return isNumberKey(event)" maxlength="10" required>
         </div>
         <div class="mb-3">
             <label for="exampleCheck1">College</label>
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" name="college">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>

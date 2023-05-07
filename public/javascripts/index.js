@@ -22,20 +22,6 @@ function nextSlide1() {
   setActivePaginationBtn(currentSlide1);
 }
 
-// Previous slide function
-// function prevSlide() {
-//   // Decrement current slide
-//   currentSlide1--;
-//   // Set current slide to the last slide if we go before the beginning
-//   if (currentSlide1 < 0) {
-//     currentSlide1 = reviewSlides.length;
-//   }
-//   // Update slider position
-//   reviews.style.transform = `translateX(-${currentSlide1 * slideWidth1}px)`;
-//   // Update active pagination button
-//   setActivePaginationBtn(currentSlide1);
-// }
-
 // Set active pagination button
 function setActivePaginationBtn(ind) {
   // Remove active class from all buttons
@@ -195,20 +181,6 @@ function showNextImage() {
 }
 
 setInterval(showNextImage, 3000);
-// *************slider********
-// const slidesho = document.getElementById("slidesho");
-// const imag = slidesho.getElementsByTagName("img");
-// let currentImageInde = 0;
-
-// function showNextImag() {
-//   imag[currentImageInde].style.display = "none";
-//   currentImageInde = (currentImageInde + 1) % imag.length;
-//   imag[currentImageInde].style.display = "block";
-// }
-
-// setInterval(showNextImag, 3000);
-
-// ********************************
 
 // ******************Facility slider**********************//
 

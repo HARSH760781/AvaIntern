@@ -3,6 +3,7 @@
 
 {{>coursehead}}
 
+
 <body>
 
     {{>header}}
@@ -26,24 +27,26 @@
                     <a href="mailto:support@avaintern.com"><img src="email.avif" alt=""></a>
                 </div>
             </div>
-            <form>
+            <form action="/" method="post">
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Name</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="fullname">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="email" name="email" class="form-control" id="exampleInputEmail1"
+                        aria-describedby="emailHelp" pattern="[a-zA-Z0-9._%+-]+@gmail\.com$" required>
                     <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Phone Number</label>
-                    <input type="tel" class="form-control">
+                    <input type="tel" class="form-control" name="mobile" pattern="[0-9]{10}" maxlength="10"
+                        onkeypress="return isNumberKey(event)" required>
                     <div id="numberHelp" class="form-text">We'll call you soon!</div>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputMessage" class="form-label">Message</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="message">
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
