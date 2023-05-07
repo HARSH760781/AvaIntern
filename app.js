@@ -18,6 +18,7 @@ hbs.registerPartials(partialsPath);
 app.use(express.static(path.join(__dirname, "./public/stylesheets")));
 app.use(express.static(path.join(__dirname, "./public/javascripts")));
 app.use(express.static(path.join(__dirname, "./public/images")));
+console.log(path.join(__dirname, "/public", "favicon.ico"));
 app.use(favicon(path.join(__dirname, "public", "favicon.ico")));
 // view engine setup
 app.set("views", templatePath);
