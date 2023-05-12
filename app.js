@@ -9,123 +9,123 @@ var favicon = require("serve-favicon");
 var mongoose = require("mongoose");
 const flash = require("connect-flash");
 
-mongoose
-  .connect("mongodb://localhost:27017/avaintern", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => console.log("Database Connected"))
-  .catch((err) => console.log(err));
+// mongoose
+//   .connect("mongodb://localhost:27017/avaintern", {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+//   })
+//   .then(() => console.log("Database Connected"))
+//   .catch((err) => console.log(err));
 
-const courseScheme = new mongoose.Schema({
-  fullname: {
-    type: String,
-    required: true,
-    trim: true,
-    uppercase: true,
-  },
-  email: {
-    type: String,
-    required: true,
-    unique: true,
-    lowercase: true,
-    trim: true,
-    // validate: {
-    //   validator: function(v) {
-    //     return /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/.test(v);
-    //   },
-    //   message: 'Please enter a valid email address'
-    // }
-  },
+// const courseScheme = new mongoose.Schema({
+//   fullname: {
+//     type: String,
+//     required: true,
+//     trim: true,
+//     uppercase: true,
+//   },
+//   email: {
+//     type: String,
+//     required: true,
+//     unique: true,
+//     lowercase: true,
+//     trim: true,
+//     // validate: {
+//     //   validator: function(v) {
+//     //     return /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/.test(v);
+//     //   },
+//     //   message: 'Please enter a valid email address'
+//     // }
+//   },
 
-  course: {
-    type: String,
-  },
-  mobile: {
-    type: Number,
-    required: true,
-  },
-  college: {
-    type: String,
-  },
-  date: {
-    type: Date,
-    default: Date.now,
-  },
-});
+//   course: {
+//     type: String,
+//   },
+//   mobile: {
+//     type: Number,
+//     required: true,
+//   },
+//   college: {
+//     type: String,
+//   },
+//   date: {
+//     type: Date,
+//     default: Date.now,
+//   },
+// });
 
-const signupSchema = new mongoose.Schema({
-  fullname: {
-    type: String,
-    required: true,
-    trim: true,
-  },
-  email: {
-    type: String,
-    required: true,
-    unique: true,
-    lowercase: true,
-    trim: true,
-    validate: {
-      validator: function (v) {
-        return /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/.test(v);
-      },
-      message: "Please enter a valid email address",
-    },
-  },
-  mobile: {
-    type: Number,
-    required: true,
-  },
-  password: {
-    type: String,
-    required: true,
-  },
-  college: {
-    type: String,
-    required: true,
-  },
-  date: {
-    type: Date,
-    default: Date.now,
-  },
-});
-const contactSchema = new mongoose.Schema({
-  fullname: {
-    type: String,
-    required: true,
-    trim: true,
-    uppercase: true,
-  },
-  email: {
-    type: String,
-    required: true,
-    unique: true,
-    lowercase: true,
-    trim: true,
-    validate: {
-      validator: function (v) {
-        return /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/.test(v);
-      },
-      message: "Please enter a valid email address",
-    },
-  },
-  mobile: {
-    type: Number,
-    required: true,
-  },
-  message: {
-    type: String,
-  },
-  date: {
-    type: Date,
-    default: Date.now,
-  },
-});
+// const signupSchema = new mongoose.Schema({
+//   fullname: {
+//     type: String,
+//     required: true,
+//     trim: true,
+//   },
+//   email: {
+//     type: String,
+//     required: true,
+//     unique: true,
+//     lowercase: true,
+//     trim: true,
+//     validate: {
+//       validator: function (v) {
+//         return /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/.test(v);
+//       },
+//       message: "Please enter a valid email address",
+//     },
+//   },
+//   mobile: {
+//     type: Number,
+//     required: true,
+//   },
+//   password: {
+//     type: String,
+//     required: true,
+//   },
+//   college: {
+//     type: String,
+//     required: true,
+//   },
+//   date: {
+//     type: Date,
+//     default: Date.now,
+//   },
+// });
+// const contactSchema = new mongoose.Schema({
+//   fullname: {
+//     type: String,
+//     required: true,
+//     trim: true,
+//     uppercase: true,
+//   },
+//   email: {
+//     type: String,
+//     required: true,
+//     unique: true,
+//     lowercase: true,
+//     trim: true,
+//     validate: {
+//       validator: function (v) {
+//         return /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/.test(v);
+//       },
+//       message: "Please enter a valid email address",
+//     },
+//   },
+//   mobile: {
+//     type: Number,
+//     required: true,
+//   },
+//   message: {
+//     type: String,
+//   },
+//   date: {
+//     type: Date,
+//     default: Date.now,
+//   },
+// });
 
-const Course = new mongoose.model("Course", courseScheme);
-const Contact = new mongoose.model("Contact", contactSchema);
-const Signup = new mongoose.model("Signup", signupSchema);
+// const Course = new mongoose.model("Course", courseScheme);
+// const Contact = new mongoose.model("Contact", contactSchema);
+// const Signup = new mongoose.model("Signup", signupSchema);
 
 var app = express();
 const port = process.env.PORT || 8080;
