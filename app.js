@@ -28,6 +28,7 @@ const courseScheme = new mongoose.Schema({
     trim: true,
     uppercase: true,
   },
+
   email: {
     type: String,
     required: true,
