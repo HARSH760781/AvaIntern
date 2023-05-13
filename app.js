@@ -9,8 +9,9 @@ var hbs = require("hbs");
 var favicon = require("serve-favicon");
 var mongoose = require("mongoose");
 const flash = require("connect-flash");
+const { log } = require("console");
 
-const db = process.env.link_to_db;
+const db = process.env.linkdb;
 console.log(db);
 mongoose
   .connect(db, {
@@ -229,11 +230,13 @@ app.post("/signup", (req, res) => {
   myData
     .save()
     .then(() => {
-      res.send("Hello");
+      res.send(myData);
       // res.status(200).render("index");
     })
     .catch((err) => {
-      res.send('<script>alert("Enter a valid  Email Address");</script>');
+      res.send(err);
+      console.log(err);
+      // res.send('<script>alert("Enter a valid  Email Address");</script>');
     });
 });
 
