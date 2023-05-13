@@ -37,6 +37,9 @@
     display: flex;
     justify-content: space-between;   
 }
+.c4{
+    width: 22%;
+}
 .my-5 {
     margin-top: 10rem !important;
 }
