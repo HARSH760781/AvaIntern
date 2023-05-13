@@ -11,8 +11,9 @@ var mongoose = require("mongoose");
 const flash = require("connect-flash");
 const { log } = require("console");
 
-const db = `mongodb+srv://${process.env.db_username}:${process.env.db_password}@cluster0.s77tvcg.mongodb.net/${process.env.database_name}?retryWrites=true&w=majority`;
+const db = `mongodb+srv://hjds760781:12345yuiop@cluster0.s77tvcg.mongodb.net/details`;
 
+console.log(db);
 mongoose
   .connect(db, {
     useNewUrlParser: true,
