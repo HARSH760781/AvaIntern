@@ -13,7 +13,6 @@ const { log } = require("console");
 
 const db = `mongodb+srv://avaintern2023:Intern${"%40"}2003@cluster0.hvg2loc.mongodb.net/details`;
 
-console.log(db);
 mongoose
   .connect(db, {
     useNewUrlParser: true,

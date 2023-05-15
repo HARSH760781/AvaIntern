@@ -12,6 +12,9 @@
 .dropdown{
     z-index: 1;
 }
+.accordion-body{
+    font-size: 15px;
+}
 .bg-body-tertiary{
     background-color: white;
     --bs-bg-opacity: -1;
@@ -622,12 +625,20 @@ margin: 5% auto;
         display: flex;
         justify-content: center;
     }
-    .links a{
+    .tags{
+        display: flex;
+        justify-content: space-around;
+    }
+    .links a,.tags a{
         margin: 0 10px;
     }
     .links a img{
         width: 100%;
 height: 60px;
+    }
+    .tags a img{
+        width: 100%;
+        height: 25px;
     }
 
     footer h1{
@@ -662,7 +673,11 @@ height: 60px;
     font-size: 25px;
 }
 .overview h1{
-    color: red;
+    color: #ffd017;
+}
+.overview h1 b{
+    box-shadow: 5px 5px 22px 4px #656285;
+    border-radius: 10px;
 }
 .certificates{
     width: 85%;
@@ -704,32 +719,19 @@ box-shadow: 8px 12px 22px 14px #cbba78;;
   }
 
   /* faqs */
-  .heading_faqs{
-    text-align: center;
-    
-    color: blue;
-  }
-  .heading_faqs h1{
-    font-weight: bolder;
-    font-size: 80px;
-  }
-  .questions{
+  .faq{
+    margin: 15% auto 15% auto;
     width: 80%;
-    /* background: grey; */
-    margin: auto;
   }
-  .que{
-    font-size: 30px;
-    width: 90%;
-    background:rgb(246, 246, 160);
-    /* border: 5px solid black; */
-    border-radius: 30px;
-    padding: 10px;
-    margin: 5% auto;
+  .faq h1{
+    text-align: center;    
+    color: #ffd017;
   }
-  .que span{
-    font-size: 40px;
-    font-weight: bold;
+  @media only screen and (max-width:650px)
+  {
+    .faq{
+        margin:15% auto 50% auto
+    }
   }
   /* whychooseus */
   .whychooseus{
@@ -1832,7 +1834,7 @@ width: 98px;
         font-size: 25px;
     }
 }
-@media only screen and (max-width:600px) {
+@media only screen and (max-width:950px) {
     .talk{
         display: flex;
         flex-direction: column-reverse;
@@ -1996,6 +1998,7 @@ width: 98px;
     }
     .overview h1 b b{
         font-size: 20px;    
+        padding: 5px;
     }
     .course-details{
         padding-left: 0px;
