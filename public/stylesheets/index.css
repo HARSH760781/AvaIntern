@@ -520,7 +520,7 @@ border-radius: 20px;
     }
     .talk img{
         width: 80%;
-        margin: auto;
+        margin: 5% 2%;
     }
     .talk-body .btn{
         width: 125px;
@@ -730,7 +730,7 @@ box-shadow: 8px 12px 22px 14px #cbba78;;
   @media only screen and (max-width:650px)
   {
     .faq{
-        margin:15% auto 50% auto
+        margin:30% auto 50% auto
     }
   }
   /* whychooseus */
