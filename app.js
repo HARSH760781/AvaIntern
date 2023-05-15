@@ -11,7 +11,7 @@ var mongoose = require("mongoose");
 const flash = require("connect-flash");
 const { log } = require("console");
 
-const db = `mongodb+srv://hjds760781:12345yuiop@cluster0.s77tvcg.mongodb.net/details`;
+const db = `mongodb+srv://avaintern2023:Intern${"%40"}2003@cluster0.hvg2loc.mongodb.net/details`;
 
 console.log(db);
 mongoose
@@ -232,13 +232,10 @@ app.post("/signup", (req, res) => {
   myData
     .save()
     .then(() => {
-      res.send(myData);
-      // res.status(200).render("index");
+      res.status(200).render("index");
     })
     .catch((err) => {
-      res.send(err);
-      console.log(err);
-      // res.send('<script>alert("Enter a valid  Email Address");</script>');
+      res.send('<script>alert("Enter a valid  Information");</script>');
     });
 });
 
