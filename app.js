@@ -201,17 +201,19 @@ app.get("/contact", (req, res) => {
 app.get("/signup", (req, res) => {
   res.render("signup");
 });
+app.get("*", (req, res) => {
+  res.status(404).render("error404");
+});
 
-app.post("/submit", (req, res) => {
+app.post("/thanku", (req, res) => {
   var myData = new Course(req.body);
   myData
     .save()
     .then(() => {
-      res.status(200).send("Your data is saved to the database...");
-      console.log(myData);
+      res.status(200).render("thanku");
     })
     .catch(() => {
-      res.send("Your data has not been saved in the database.");
+      res.status(404).render("error");
     });
 });
 app.post("/contact", (req, res) => {
@@ -223,8 +225,7 @@ app.post("/contact", (req, res) => {
       res.status(200).render("contact");
     })
     .catch((err) => {
-      console.log(err);
-      // res.send('<script>alert("Enter a valid  Email Address");</script>');
+      res.send('<script>alert("Enter a valid  Information");</script>');
     });
 });
 app.post("/signup", (req, res) => {
