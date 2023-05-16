@@ -604,7 +604,7 @@ margin: 5% auto;
         display: flex;
     }
     form{
-        margin: auto;
+        margin: 5% auto;
         padding: 20px;
         width: 40%;
         background: rgb(225, 240, 225);
@@ -1479,8 +1479,8 @@ box-shadow: 7px 20px 31px 6px #f4e612;
         transform: none;
     }
     .partners img{
-        height: 50px;
-        width: 42px;
+        height: 45px;
+        width: auto;
     }
 }
 @media only screen and (max-width:490px)
