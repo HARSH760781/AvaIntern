@@ -173,6 +173,12 @@ app.get("/course", (req, res) => {
 app.get("/course/ds", (req, res) => {
   res.render("ds");
 });
+app.get("/course/cad", (req, res) => {
+  res.render("cad");
+});
+app.get("/course/java", (req, res) => {
+  res.render("java");
+});
 app.get("/course/marketing", (req, res) => {
   res.render("marketing");
 });
