@@ -3,6 +3,19 @@
 
 {{>coursehead}}
 
+<script>
+    function playVideo() {
+        var videoUrl = "/intro_video.mp4";
+        var newTab = window.open();
+        newTab.document.write(`
+        <video src="${videoUrl}" controls autoplay>
+          Your browser does not support the video tag.
+        </video>
+      `);
+        newTab.document.close();
+    }
+</script>
+
 <body>
     {{>header}}
     <main>
@@ -20,7 +33,7 @@
             </p>
             <div class="some-btn" style="display: flex;justify-content: space-around;margin-top: 5%;">
                 <button type="button" class="btn btn-warning"><b><a href="/course"> See Courses</a></b></button>
-                <button type="button" class="btn btn-warning" style="color:black;">
+                <button type="button" class="btn btn-warning" style="color:black;" onclick="playVideo()">
                     {{!-- <video src="/intro_video.mp4"> --}}
                         <b>Watch Video</b>
                         {{!-- </video> --}}
@@ -144,6 +157,8 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="cards">
                     <div class="card">
                         <img src="/bg-courses/ds.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
