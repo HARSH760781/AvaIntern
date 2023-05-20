@@ -8,7 +8,13 @@
         var videoUrl = "/intro_video.mp4";
         var newTab = window.open();
         newTab.document.write(`
-        <video src="${videoUrl}" controls autoplay>
+        <video  src="${videoUrl}" controls autoplay style="
+        text-align: center;
+        width: 90%;
+        margin: 10% auto;
+        display: flex;
+        justify-content: center;
+        ">
           Your browser does not support the video tag.
         </video>
       `);
