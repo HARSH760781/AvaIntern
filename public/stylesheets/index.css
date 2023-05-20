@@ -111,6 +111,12 @@ overflow: hidden;
   .pagination button.active {
     background-color: #555;
   }
+  .cantainer{
+    margin: 30% 5%;
+  }
+  .left-cantainer{
+    margin: 5% auto;
+  }
 /*   
 .container::before{
     content: "";

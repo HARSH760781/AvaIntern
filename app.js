@@ -179,6 +179,12 @@ app.get("/course/cad", (req, res) => {
 app.get("/course/bda", (req, res) => {
   res.render("bda");
 });
+app.get("/course/bde", (req, res) => {
+  res.render("bde");
+});
+app.get("/course/bda", (req, res) => {
+  res.render("bda");
+});
 app.get("/course/technical", (req, res) => {
   res.render("technical");
 });
