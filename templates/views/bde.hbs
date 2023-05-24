@@ -19,8 +19,26 @@
                         height: auto;
                     }
 
+                    @media only screen and (min-width:500px) {
+
+                        .x-axis,
+                        .y-axis {
+                            font-size: 20px;
+                            font-weight: bolder;
+                        }
+                    }
+
+                    @media only screen and (min-width:400px) and (max-width:499px) {
+
+                        .x-axis,
+                        .y-axis {
+                            font-size: 15px;
+                            font-weight: bolder;
+                        }
+                    }
+
                     .bar {
-                        fill: steelblue;
+                        fill: #ffd017;
                     }
 
                     .graphs {
@@ -41,17 +59,16 @@
                 <script>
                     // Sample data for the bar graph
                     const data = [
-                        { category: 'A', value: 25 },
-                        { category: 'B', value: 40 },
-                        { category: 'C', value: 30 },
-                        { category: 'D', value: 50 },
-                        { category: 'E', value: 35 }
+                        { category: 'IIT', value: 25 },
+                        { category: 'NIT', value: 40 },
+                        { category: 'University', value: 30 },
+                        { category: 'Autonomous', value: 90 }
                     ];
 
                     // Set up the SVG element and dimensions
                     const container = document.getElementById("graphContainer");
                     const containerWidth = container.offsetWidth;
-                    const containerHeight = containerWidth * 0.75;
+                    const containerHeight = containerWidth * 0.95;
 
                     const svg = d3.select("#barGraph")
                         .attr("width", containerWidth)
@@ -64,7 +81,7 @@
                     // Create the x and y scales
                     const xScale = d3.scaleBand()
                         .range([0, width])
-                        .padding(0.1)
+                        .padding(0.2)
                         .domain(data.map(d => d.category));
 
                     const yScale = d3.scaleLinear()
