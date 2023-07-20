@@ -10,9 +10,11 @@ var favicon = require("serve-favicon");
 var mongoose = require("mongoose");
 const flash = require("connect-flash");
 const { log } = require("console");
-
-const db = `mongodb+srv://avaintern2023:Intern${"%40"}2003@cluster0.hvg2loc.mongodb.net/details`;
-
+const username = process.env.MONGODB_USERNAME;
+const password = process.env.MONGODB_PASSWORD;
+const hostname = "cluster0.hvg2loc.mongodb.net";
+const databaseName = "details";
+const db = `mongodb+srv://${username}:${password}@${hostname}/${databaseName}`;
 mongoose
   .connect(db, {
     useNewUrlParser: true,
