@@ -37,12 +37,6 @@ const courseScheme = new mongoose.Schema({
     unique: true,
     lowercase: true,
     trim: true,
-    // validate: {
-    //   validator: function(v) {
-    //     return /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/.test(v);
-    //   },
-    //   message: 'Please enter a valid email address'
-    // }
   },
 
   course: {
@@ -219,6 +213,9 @@ app.get("/course/dsa", (req, res) => {
 });
 app.get("/contact", (req, res) => {
   res.render("contact");
+});
+app.get("/course/vlsi", (req, res) => {
+  res.render("vlsi");
 });
 app.get("/signup", (req, res) => {
   res.render("signup");

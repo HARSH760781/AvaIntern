@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>coursehead}}
+
+<body>
+    {{>header}}
+
+    <main>
+        <div class="container">
+            <div class="section">
+                <img src="/courses/vlsi.png" style="width: 100%;" alt="Loading...">
+                <h1><b>Introduction to VLSI course</b></h1>
+                <p> Overview of VLSI technology, historical development, and its significance in modern electronics.</p>
+            </div>
+        </div>
+        {{>form}}
+        <div class="overview">
+            <h1><b><b>Overview</b></b></h1><br>
+            <p>
+                <b>Objective:</b>
+                <li> To provide students with a comprehensive understanding of VLSI technology, its principles, design
+                    methodologies, and practical applications.</li><br>
+                <b>Duration:</b>
+                <li> Typically offered as a semester-long course in undergraduate or postgraduate engineering programs.
+                </li>
+                <br><b>Formate:</b>
+                <li> Lecture-based with laboratory or hands-on sessions for practical design experience.</li>
+            </p>
+
+            <br><br>
+            <b>
+                <hr>
+                <hr>
+                <hr>
+            </b>
+            <br><br>
+            <h1><b><b>Course Curriculum</b></b></h1>
+            <br>
+
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <strong>Introduction of VLSI</strong>
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Overview of VLSI technology, historical development, and its significance in modern
+                            electronics.
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <strong> Digital Logic Design</strong>
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Basics of digital circuits, logic gates, and Boolean algebra.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <strong>CMOS Technology:</strong>
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+
+                            Understanding complementary metal-oxide-semiconductor technology, fabrication processes, and
+                            device characteristics.
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            <strong> Boot strap & SAAS</strong>
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <b>VLSI Design Flow:</b>
+                            <br>
+                            Step-by-step process of VLSI chip design, from specification to fabrication.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            <strong> Javascript</strong>
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <b>Logic Synthesis:</b>
+                            <br>
+                            Converting RTL descriptions into gate-level representations.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            <strong>Verification and Testing:</strong>
+                        </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Ensuring correctness and reliability of VLSI designs.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingEight">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                            <strong>Advanced Topics</strong>
+                        </button>
+                    </h2>
+                    <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Emerging trends like 3D integration, neuromorphic computing, and quantum VLSI.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        {{>pricingandcertificate}}
+        {{>talk}}
+    </main>
+    {{>footer}}
+</body>
+
+</html>
