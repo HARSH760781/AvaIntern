@@ -1756,7 +1756,7 @@ width: 98px;
         height: 200px;
       }
       #slideshow{
-        height: 300px;
+        height: auto;
       }
       .thought-author {
         padding:0 15px;
