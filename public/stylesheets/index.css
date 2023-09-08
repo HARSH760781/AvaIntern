@@ -163,9 +163,9 @@ background-image: url('bgg.jpg');
 
 }
 .container img{
-    width: 100%;
+    width: 63%;
     height: 100%;
-    /* margin: 5% auto; */
+    margin: 0% auto
 }
 /* number */
 .number{
