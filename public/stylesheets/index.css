@@ -8,7 +8,15 @@
 *{
     margin: 0;padding: 0;
 }
-
+#video-iframe{
+    width: 100%;
+    margin: 10% auto;
+}
+@media screen and (max-width:480px) {
+    #video-iframe{
+        height: auto;
+    }
+}
 .navbar-nav{
     z-index: 1;
 }
@@ -194,7 +202,7 @@ background-image: url('bgg.jpg');
 
 }
 .container img{
-    width: 63%;
+    width: 100%;
     height: 100%;
     margin: 10% auto
 }
@@ -550,19 +558,18 @@ border-radius: 20px;
         margin: 20% auto 2% auto;
     }
     .talk{
-        background: rgb(223, 161, 161);
         display: flex;
         justify-content: space-around;
         margin: 10px;
     }
     .talk-body{
-        color: white;
+        color: black;
         margin: 5% 10px;
         width: 40%;
         font-size: 20px;
     }
     .talk img{
-        width: 80%;
+        width: 50%;
         margin: 5% 2%;
     }
     .talk-body .btn{

@@ -51,20 +51,19 @@
 
                 universities and companies
             </p>
-            <div class="some-btn" style="display: flex;justify-content: space-around;margin-top: 5%;">
-                <button type="button" class="btn btn-warning"><b><a href="/course"> See Courses</a></b></button>
-                <button type="button" class="btn btn-warning" style="color:black;" onclick="playVideo()">
+            <div class="some-btn" style="display: flex; justify-content: space-around; margin-top: 5%;">
+                <button type="button" class="btn btn-warning"><b><a href="/course">See Courses</a></b></button>
+                <button type="button" class="btn btn-warning" style="color: black;" onclick="playVideo()">
                     <b>Watch Video</b>
                 </button>
             </div>
+
             <div id="video-container" style="display: none;">
-                <div style="position: relative; padding-bottom: 56.25%; /* 16:9 aspect ratio */">
-                    <video id="my-video" controls
-                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-                        <source src="/intro_video.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
+                <iframe id="video-iframe" width="560" height="315"
+                    src="https://www.youtube.com/embed/Asw9UXFnBSw?si=kkE_oIcxfxkn3X_K" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
             </div>
         </div>
         <div class="slider">
@@ -107,7 +106,8 @@
                         <img src="/courses/full-stack.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h4><b> Full Stack Web Design</b></h4>
-                            <p class="card-text">Web development allows you to build attractive, engaging, and robust
+                            <p class="card-text">Web development allows you to build attractive, engaging, and
+                                robust
                                 websites.</p>
                             <div class="price" style="display: flex;justify-content: space-between;">
                                 {{!-- <p><b> &#x20b9; 6999</b></p> --}}
@@ -133,11 +133,13 @@
                         <img src="/courses/human.webp" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h4><b> Human Resources</b></h4>
-                            <p class="card-text">Human resources provides support and management of an organization's
+                            <p class="card-text">Human resources provides support and management of an
+                                organization's
                                 workforce.</p>
                             <div class="price" style="display: flex;justify-content: space-between;">
                                 {{!-- <p><b> &#x20b9; 6999</b></p> --}}
-                                <button type="button" class="btn btn-warning"><b><a href="/course/human"> Human Resource
+                                <button type="button" class="btn btn-warning"><b><a href="/course/human"> Human
+                                            Resource
                                         </a></b></button>
                             </div>
                         </div>
@@ -165,7 +167,8 @@
                                 business goals.</p>
                             <div class="price" style="display: flex;justify-content: space-between;">
                                 {{!-- <p><b> &#x20b9; 6999</b></p> --}}
-                                <button type="button" class="btn btn-warning"><b><a href="/course/marketing"> Digital
+                                <button type="button" class="btn btn-warning"><b><a href="/course/marketing">
+                                            Digital
                                             Marketing</a></b></button>
                             </div>
                         </div>
@@ -174,7 +177,8 @@
                         <img src="/courses/data-science.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h4><b> Data Science</b></h4>
-                            <p class="card-text">Data science provides solutions by analyzing data using statistical and
+                            <p class="card-text">Data science provides solutions by analyzing data using statistical
+                                and
                                 computational methods</p>
                             <div class="price" style="display: flex;justify-content: space-between;">
                                 {{!-- <p><b> &#x20b9; 6999</b></p> --}}
@@ -190,7 +194,8 @@
                         <div class="card-body">
                             <h4><b> AutoCAD</b></h4>
                             <p class="card-text">It is widely
-                                used in various industries, including architecture, engineering, and construction. </p>
+                                used in various industries, including architecture, engineering, and construction.
+                            </p>
                             <div class="price" style="display: flex;justify-content: space-between;">
                                 <button type="button" class="btn btn-warning"><b><a href="/course/cad">
                                             AutoCad</a></b></button>
