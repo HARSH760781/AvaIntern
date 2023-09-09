@@ -4,21 +4,28 @@
 {{>coursehead}}
 
 <script>
+    /*  {{!-- function playVideo() {
+          var videoUrl = "/intro_video.mp4";
+          var newTab = window.open();
+          newTab.document.write(`
+          <video  src="${videoUrl}" controls autoplay style="
+          text-align: center;
+          width: 90%;
+          margin: 10% auto;
+          display: flex;
+          justify-content: center;
+          ">
+            Your browser does not support the video tag.
+          </video>
+        `);
+          newTab.document.close();
+      } --}}
+  */
     function playVideo() {
-        var videoUrl = "/intro_video.mp4";
-        var newTab = window.open();
-        newTab.document.write(`
-        <video  src="${videoUrl}" controls autoplay style="
-        text-align: center;
-        width: 90%;
-        margin: 10% auto;
-        display: flex;
-        justify-content: center;
-        ">
-          Your browser does not support the video tag.
-        </video>
-      `);
-        newTab.document.close();
+        var videoContainer = document.getElementById("video-container");
+        videoContainer.style.display = "block";
+        var video = document.getElementById("my-video");
+        video.play();
     }
 </script>
 
@@ -26,7 +33,14 @@
     {{>header}}
     <main>
         <div class="container my-3">
-            <img src="HEADER.gif" alt="">
+            <div class="header">
+                <img class="animated-image" src="HEADER.gif" alt="">
+            </div>
+            <div class="extra-header">
+                <p>Upgrade Skills at AvaIntern</p>
+                <p>Expand your career opportunities</p>
+                <p>Find a Novel method of learning</p>
+            </div>
         </div>
 
         <div class="content">
@@ -42,8 +56,15 @@
                 <button type="button" class="btn btn-warning" style="color:black;" onclick="playVideo()">
                     <b>Watch Video</b>
                 </button>
-
-
+            </div>
+            <div id="video-container" style="display: none;">
+                <div style="position: relative; padding-bottom: 56.25%; /* 16:9 aspect ratio */">
+                    <video id="my-video" controls
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                        <source src="/intro_video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
         </div>
         <div class="slider">
