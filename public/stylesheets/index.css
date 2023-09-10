@@ -9,12 +9,19 @@
     margin: 0;padding: 0;
 }
 #video-iframe{
-    width: 100%;
+    width: 48%;
     margin: 10% auto;
+    display: flex;
 }
 @media screen and (max-width:480px) {
     #video-iframe{
         height: auto;
+    }
+}
+@media screen and (max-width:750px)
+{
+    #video-iframe{
+       width: 98%;
     }
 }
 .navbar-nav{
@@ -634,7 +641,7 @@ margin: 5% auto;
         width: 100%;
         opacity: 0.2;
         z-index: 1;
-        margin: 20% auto 0 auto;
+        margin: 5% auto 0 auto;
 
         /* height: 105%; */
     }
@@ -971,6 +978,9 @@ object-fit: cover;
     }
     .facility-heading{
         behavior: scroll;
+    }
+    .contact img{
+        margin: 15% auto 0 auto;
     }
     .buttons .btn{
         height: 40px;
@@ -1476,10 +1486,11 @@ box-shadow: 10px 2px 36px 4px #272f20;
     }
     .multiple-cards{
         width: 100%;
+            flex-direction: column;
     }
     .multiple-cards .cards .card{
-        width: 100%;
-        height: 300px;
+        width: 60%;
+        margin: 5% auto;
     }
     .thoughts{
         display: flex;
@@ -1614,8 +1625,8 @@ box-shadow: 10px 2px 36px 4px #272f20;
         font-weight: normal;
     }
     .multiple-cards .cards{
-        width: 70%;
-        margin: auto;
+        width: 100%;
+        margin: 2% auto;
     }
     .mentor {
         font-size: 13px;
@@ -1713,7 +1724,7 @@ color: blue;
 }
 .extra .img img{
     width: 60%;
-    margin-bottom:10% ;
+    box-shadow: none;
 }
 .container .section img{
     margin: 40% auto auto;
@@ -1729,6 +1740,9 @@ color: blue;
         height: 54px;
         border-radius: 20px;
         font-size: 7px;
+    }
+    .multiple-cards .cards .card{
+        width: 85%;
     }
     .signup-form{
         margin: 25% auto auto;
@@ -1873,8 +1887,7 @@ width: 98px;
       }
       .extra .img img {
         width: 90%;
-        height: 325px;
-        box-shadow: 0px 0 4px -6px #f4e612;
+        box-shadow: none;
       }
       .info-3 .btn{
         width: 50%;
