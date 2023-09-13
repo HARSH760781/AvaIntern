@@ -8,6 +8,8 @@
 *{
     margin: 0;padding: 0;
 }
+
+
 #video-iframe{
     width: 48%;
     margin: 10% auto;
@@ -660,6 +662,9 @@ margin: 5% auto;
         display: flex;
     }
     form{
+        box-shadow: 5px 11px 24px 10px;
+        border: 7px solid black;
+        border-radius: 23px;
         margin: 5% auto;
         padding: 20px;
         width: 40%;
@@ -1075,7 +1080,7 @@ padding: 60px 0 0 0;
 .pricing{
     width: 80%;
     margin: 20% auto;
-    background: rgb(242, 239, 234);
+    background: rgb(254, 234, 101);
     padding: 20px;
     text-align:center;
 border: 5px solid black;
@@ -1725,9 +1730,9 @@ color: blue;
     width: 60%;
     box-shadow: none;
 }
-.container .section img{
+/* .container .section img{
     margin: 40% auto auto;
-}
+} */
 .section b{
     font-size: 17px;
 }
