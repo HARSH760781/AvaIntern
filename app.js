@@ -210,6 +210,7 @@ app.get("/course/ui-ux", (req, res) => {
 });
 app.get("/course/dsa", (req, res) => {
   res.render("dsa");
+  main;
 });
 app.get("/course/ai", (req, res) => {
   res.render("ai");
