@@ -1290,6 +1290,10 @@ box-shadow: 10px 2px 36px 4px #272f20;
 }
 @media only screen and (max-width:992px)
 {
+    .card-body h4 b
+    {
+        font-size: 60%;
+    }
     .container {
         width: 100%;
         display: flex;
@@ -1415,11 +1419,13 @@ box-shadow: 10px 2px 36px 4px #272f20;
     .c1 p{
         font-size: 15px;
     }
+    
 }
 @media only screen and (max-width:652px){
     .content{
         font-size: 20px;
     }
+   
    
     .container{
         flex-direction: column;
