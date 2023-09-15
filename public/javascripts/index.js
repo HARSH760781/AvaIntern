@@ -1,3 +1,20 @@
+/* Lazy loading */
+const lazyImages = document.querySelectorAll("img[data-src]");
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const img = entry.target;
+      img.src = img.getAttribute("data-src"); // Load the image
+      img.removeAttribute("data-src"); // Remove data-src to avoid loading it again
+      observer.unobserve(img); // Stop observing this image
+    }
+  });
+});
+
+lazyImages.forEach((img) => {
+  observer.observe(img);
+});
+
 // //**********blog***************** */
 const reviews = document.querySelector(".reviews");
 const reviewSlides = document.querySelectorAll(".review");
