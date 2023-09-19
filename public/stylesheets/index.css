@@ -26,14 +26,51 @@
        width: 98%;
     }
 }
+.course-overview{
+    width: 100%;
+    text-align: center;
+    margin: 3% auto;
+    
+}
+.course-overview h1{
+    font-weight: bold;
+}
+.collapse-overview{
+    display: grid;
+    gap: 10px;
+    margin: 3% auto;
+}
+.collapse-item{
+    
+    width: 90%;
+    border-radius: 5px;
+    background: #f6f5f4;
+    margin: auto;
+    padding: 10px;
+    box-shadow: 2px 3px 8px 1px;
+
+}
+.accordion-button:not(.collapsed) {
+background-color: white;
+}
 .navbar-nav{
     z-index: 1;
 }
 .dropdown{
     z-index: 2;
 }
+.accordion{
+    width: 90%;
+    margin: auto;
+    gap: 20px;
+    display: grid;
+}
 .accordion-body{
     font-size: 15px;
+}
+.accordion-item {
+    box-shadow: 3px 2px 10px 0px;
+    border-radius: 2px;
 }
 .bg-body-tertiary{
     background-color: white;
@@ -2070,7 +2107,7 @@ width: 98px;
 @media only screen and (max-width:800px)
 {
     .certificates .card img{
-        width: 80%;
+        width: 100%;
         height: auto;
         margin: auto;
     }
