@@ -171,11 +171,15 @@ overflow: hidden;
     border-left: 6px solid green;
     height: 500px;
   }
+
   .grid-container {
     display: grid;
+    margin: 0 0 20px 0;
+    gap: 0px;
     grid-template-columns: auto auto auto;
     /* background-color: #2196F3; */
     padding: 10px;
+    /* position: relative; */
   }
   .grid-item {
     background-color: rgba(255, 255, 255, 0.8);
@@ -184,11 +188,42 @@ overflow: hidden;
     font-size: 30px;
     text-align: center;
   }
+  .grid-item:not(:nth-child(3)){
+    border-right: 1px solid #ccc; 
+} 
+  .grid-item:nth-child(6){
+    border-right:none; 
+} 
+  .grid-item:nth-child(1),
+  .grid-item:nth-child(2),
+  .grid-item:nth-child(3){
+    border-bottom:1px solid #ccc; 
+} 
+  .grid-item img{
+    width:40px;
+  }
+  .rs{
+    width: 25px;
+  }
   .about-course{
     text-align: center;
+    
   }
-  .about-course h1,h3,p{
+  /* .grid-container:before {
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: 33.333%; /* Adjust the position of vertical lines as needed 
+    width: 1px;
+    height: 75%;
+    background: linear-gradient(to bottom, transparent 1px, #ccc 1px);
+    background-size: 20px 100%; /* Adjust the size of the vertical lines as needed 
+} */
+  .about-course h1,h3{
     font-weight: bold;
+  }
+  .about-course p{
+    font-size: medium;
   }
 
   
@@ -703,9 +738,9 @@ margin: 5% auto;
     /* contact */
     .contact img{
         width: 100%;
-        opacity: 0.2;
+        opacity: 0.8;
         z-index: 1;
-        margin: 5% auto 0 auto;
+        margin: 15% auto 0 auto;
 
         /* height: 105%; */
     }
@@ -1055,7 +1090,7 @@ object-fit: cover;
         behavior: scroll;
     }
     .contact img{
-        margin: 15% auto 0 auto;
+        margin: 30% auto 0 auto;
     }
     .buttons .btn{
         height: 40px;
