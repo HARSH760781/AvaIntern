@@ -731,7 +731,7 @@ margin: 5% auto;
         margin: 5% auto;
         padding: 20px;
         width: 40%;
-        background: rgb(225, 240, 225);
+        /* background: rgb(225, 240, 225); */
     }
     form:hover{
         transform: scale(1.1);
@@ -793,7 +793,7 @@ height: 60px;
     background-color: #ffd017;
 }
 .overview{
-    background: whitesmoke;
+    /* background: whitesmoke; */
     width: 80%;
     margin: auto;
     padding: 20px;
@@ -803,8 +803,8 @@ height: 60px;
     color: #ffd017;
 }
 .overview h1 b{
-    box-shadow: 5px 5px 22px 4px #656285;
-    border-radius: 10px;
+    /* box-shadow: 5px 5px 22px 4px #656285; */
+    border-radius: 5px;
 }
 .certificates{
     width: 85%;
