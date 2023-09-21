@@ -1611,6 +1611,7 @@ box-shadow: 10px 2px 36px 4px #272f20;
     }
     .multiple-cards .cards .card{
         width: auto;
+        transform: scale(1.1);
         margin: 5% auto;
     }
     .thoughts{
@@ -1874,6 +1875,7 @@ color: blue;
     }
     .multiple-cards .cards .card{
         width: auto;
+        margin: 20px 20px;
     }
     .signup-form{
         margin: 25% auto auto;
@@ -1895,7 +1897,7 @@ color: blue;
         font-size: 15px;
     }
     .cards .card:hover{
-        /* transform: scale(1.1,1.1); */
+        transform: scale(1.1);
         margin: 20px auto;
     }
     .info-3{
