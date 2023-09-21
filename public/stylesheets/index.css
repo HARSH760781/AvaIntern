@@ -1024,6 +1024,11 @@ font-family: robo;
     transition: transform 0.5s ease-in-out;
     box-shadow: 10 10 10 10 #fff017;
   }
+  form .submit{
+    color: black;
+    width: 100%;
+    font-weight: bold;
+  }
   .buttons{
     display: flex;
     justify-content: center;
