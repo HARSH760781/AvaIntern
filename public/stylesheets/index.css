@@ -64,6 +64,7 @@ background-color: white;
     margin: auto;
     gap: 20px;
     display: grid;
+    z-index: 2;
 }
 .accordion-body{
     font-size: 15px;
