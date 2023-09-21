@@ -1027,7 +1027,7 @@ font-family: robo;
   form .submit{
     color: black;
     width: 100%;
-    font-weight: bold;
+    font-weight: bold; 
   }
   .buttons{
     display: flex;
