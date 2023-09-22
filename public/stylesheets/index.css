@@ -9,6 +9,14 @@
     margin: 0;padding: 0;
 }
 
+.graphs{
+    width: 90%;
+    margin: 20% auto 0 auto;
+}
+.graphs img{
+    width: 100%;
+    margin: auto;
+}
 #form h2{
     font-weight: bolder;
     text-align: center;
@@ -278,10 +286,10 @@ overflow: hidden;
     background-color: #555;
   }
   .cantainer{
-    margin: 30% 5%;
+    margin: auto;
   }
-  .left-cantainer{
-    margin: 5% auto;
+  .left-cantainer,.right-cantainer{
+    margin: 5% 20px;
   }
 /*   
 .container::before{
@@ -441,6 +449,7 @@ background-image: url('bgg.jpg');
 }
 .card-body{
     text-align: center;
+    padding: 10px;
 }
 .card-body .btn{
         position: absolute;
@@ -455,7 +464,7 @@ background-image: url('bgg.jpg');
 }
 .cards .card:hover{
     transform: scale(1.2,1.2);
-    background-color: rgb(229, 243, 183);
+    /* background-color: rgb(229, 243, 183); */
 }
 .section{
     width: 90%;
@@ -477,6 +486,7 @@ color: rgb(27, 11, 11);
 }
 .course-card .btn{
     position: relative;
+    margin: 0 10%;
     width: auto;
 }
 .course-card{
@@ -517,7 +527,34 @@ color: rgb(27, 11, 11);
 /*******************Blogs start**************************/  
 
 /*******************Blogs end**************************/  
-
+/*********************Non-technical************/
+.non-tech{
+    width: 90%;
+    margin: auto;
+}
+.non-tech img{
+    width: 100%;
+}
+.watch-out{
+    width: auto;
+    margin: auto;
+}
+.watch-out h1{
+    font-size: 100%;
+    text-align: center;
+}
+.watch-out-btn{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.non-tech-btn
+{
+    width: auto;
+    margin: 10px auto;
+    font-size: 100%;
+}
 
 .extra{
     /* background: gray; */
@@ -1630,7 +1667,7 @@ box-shadow: 10px 2px 36px 4px #272f20;
     .multiple-cards .cards .card{
         width: auto;
         transform: scale(1.1);
-        margin: 5% auto;
+        margin: 10% auto;
     }
     .thoughts{
         display: flex;
@@ -1644,7 +1681,7 @@ box-shadow: 10px 2px 36px 4px #272f20;
       }
       .cards .card:hover{
         transform:none;
-        background-color: rgb(229, 243, 183);
+        /* background-color: rgb(229, 243, 183); */
     }
      .author{
         width: 100%;
@@ -1769,8 +1806,8 @@ box-shadow: 10px 2px 36px 4px #272f20;
         font-weight: normal;
     }
     .multiple-cards .cards{
-        width: 100%;
-        margin: 2% auto;
+        width: 90%;
+        margin:auto;
     }
     .mentor {
         font-size: 13px;
@@ -1892,8 +1929,7 @@ color: blue;
         margin: 5px;
     }
     .multiple-cards .cards .card{
-        width: auto;
-        margin: 20px 20px;
+        width: 90%;
     }
     .signup-form{
         margin: 25% auto auto;
@@ -1915,7 +1951,7 @@ color: blue;
         font-size: 15px;
     }
     .cards .card:hover{
-        transform: scale(1.1);
+        transform: scale(1.0);
         margin: 20px auto;
     }
     .info-3{

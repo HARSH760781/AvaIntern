@@ -223,6 +223,12 @@ app.get("/course/vlsi", (req, res) => {
 app.get("/signup", (req, res) => {
   res.render("signup");
 });
+app.get("/technical", (req, res) => {
+  res.render("technical");
+});
+app.get("/non_technical", (req, res) => {
+  res.render("non_technical");
+});
 app.get("*", (req, res) => {
   res.status(404).render("error404");
 });
