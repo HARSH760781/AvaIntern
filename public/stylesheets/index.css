@@ -531,9 +531,10 @@ color: rgb(27, 11, 11);
 .non-tech{
     width: 90%;
     margin: auto;
+    display: flex;
 }
 .non-tech img{
-    width: 100%;
+    width: 50%;
 }
 .watch-out{
     width: auto;
@@ -556,6 +557,22 @@ color: rgb(27, 11, 11);
     font-size: 100%;
 }
 
+@media screen and (max-width:652px)
+{
+    .non-tech{
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .non-tech img{
+        width: 100%;
+    }
+}
+
+
+
+/****************ends***********/
 .extra{
     /* background: gray; */
     width: 90%;
