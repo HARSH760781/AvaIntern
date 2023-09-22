@@ -1,3 +1,13 @@
+<script>
+    const scrollButton = document.getElementById("btn-scroll");
+    const formContainer = document.getElementById("form");
+    console.log(scrollButton);
+    console.log(formContainer);
+
+    scrollButton.addEventListener("click", function () {
+        formContainer.scrollIntoView({ behavior: "smooth" });
+    });
+</script>
 <div class="certificates">
     <div class="card">
         <img src="https://res.cloudinary.com/df6f8uemq/image/upload/v1694329566/xyz/images/certificate_a93dws.jpg"
@@ -9,21 +19,20 @@
     </div>
 </div>
 
+
+
 <div class="about-course">
     <h1>About the Course</h1>
     <div class="grid-container">
         <div class="grid-item">
             <img src="https://res.cloudinary.com/df6f8uemq/image/upload/v1695295937/clock_eqoium.gif" alt="Clock... ">
-            {{!-- <i class="fa-solid fa-clock fa-flip" style="color: #e0da1f;"></i> --}}
             <p>30+ hours Training</p>
         </div>
         <div class="grid-item">
             <img src="https://res.cloudinary.com/df6f8uemq/image/upload/v1695295938/modules_cfco8h.gif" alt="Module...">
-            {{!-- <i class="fa-solid fa-video" style="color: #f6d604;"></i> --}}
             <p>25+ Modules</p>
         </div>
         <div class="grid-item">
-            {{!-- <i class="fa-solid fa-list-check"></i>/ --}}
             <img src="https://res.cloudinary.com/df6f8uemq/image/upload/v1695295890/assignment_kdeyhc.gif"
                 alt="Loading...">
             <p>Assignments</p>
@@ -31,45 +40,22 @@
         <div class="grid-item">
             <img src="https://res.cloudinary.com/df6f8uemq/image/upload/v1695295939/projects_ncudkp.gif"
                 alt="Loading...">
-            {{!-- <i class="fa-solid fa-list-check"></i> --}}
             <p>2 Projects</p>
         </div>
         <div class="grid-item">
             <img src="https://res.cloudinary.com/df6f8uemq/image/upload/v1695295890/certificate_i0kt3h.gif"
                 alt="Loading...">
-            {{!-- <i class="fa-solid fa-file-invoice fa-beat-fade" style="color: #fbe709;"></i> --}}
             <p>Assured Certificate</p>
         </div>
         <div class="grid-item">
             <img src="https://res.cloudinary.com/df6f8uemq/image/upload/v1695295937/courses_d70zj4.gif"
                 alt="Loading...">
-            {{!-- <i class="fa-solid fa-book-open fa-beat-fade" style="color: #ede502;"></i> --}}
             <p>Specialize Course</p>
         </div>
     </div>
-    <h5>Mentorship Program Price <br> <span><img class="rs"
-                src="https://res.cloudinary.com/df6f8uemq/image/upload/v1695295938/price_tag_zd5nps.gif" alt=`<i class="
+    <h5>Mentorship Program Price <br> <span><a href="#"><button id="btn-scroll"><img class="rs"
+                        src="https://res.cloudinary.com/df6f8uemq/image/upload/v1695295938/price_tag_zd5nps.gif" alt=`<i
+                        class="
             fa-solid fa-indian-rupee-sign fa-beat-fade" style="color: #f1e904;"></i>
-            1999</h5></span>
-
-    {{!-- <div class="grid-item">7</div>
-    <div class="grid-item">8</div>
-    <div class="grid-item">9</div> --}}
+                    11999</h5></button></a></span>
 </div>
-
-{{!-- <div class="pricing">
-    <h1><b><b>Pricing Plans</b></b></h1>
-    <h2><b> Traineeship</b></h2>
-    <h2><b>Rs. 11,999</b></h2><br>
-    <ul>
-        <h3><b>What you get from this : </b></h3><br>
-        <li>Internship Certificate by Co-Branded Company</li>
-        <li>1 minor + 1 Major project</li>
-        <li>Live Conversations With Industry Professionals</li>
-        <li>16+ hours of mentor training</li>
-        <li>25+ hours of video content access</li>
-        <li>Access to Specialized Course Materials</li>
-        <li>Outstanding Certificate on successful completion of extra projects</li>
-        <li>Training Certificate from AvaIntern</li>
-    </ul>
-</div> --}}

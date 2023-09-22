@@ -9,7 +9,25 @@
     margin: 0;padding: 0;
 }
 
-
+#form h2{
+    font-weight: bolder;
+    text-align: center;
+    color: black;
+    font-family: math;
+    margin: 5% auto 0 0;
+}
+#btn-scroll{
+    background: black;
+    width: auto;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    margin: 10px;
+}
+#btn-scroll:hover{
+    transform: scale(1.1);
+}
 #video-iframe{
     width: 48%;
     margin: 10% auto;
@@ -764,7 +782,7 @@ margin: 5% auto;
         /* box-shadow: 5px 11px 24px 10px; */
         /* border: 7px solid black; */
         border-radius: 23px;
-        margin: 5% auto;
+        margin:auto;
         padding: 20px;
         width: 40%;
         /* background: rgb(225, 240, 225); */
@@ -2114,7 +2132,7 @@ width: 98px;
     }
     form{
         width: 90%;
-        margin: 5% auto 5% auto;
+        margin: auto;
     }
     .extra-connections{
         margin: auto;
