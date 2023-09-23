@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200&display=swap');
@@ -280,7 +281,7 @@ overflow: hidden;
   .extra-header p{
     font-size: 25px;
     text-align: center;
-    font-family: 'Lobster', cursive;
+    font-family: 'League Spartan', sans-serif;
   }
   .pagination button.active {
     background-color: #555;
@@ -478,7 +479,7 @@ align-items: center;
     font-size: 20px;
     font-weight: bolder;
     position: absolute;
-top: 30%;
+    bottom: 10px;
 color: rgb(27, 11, 11);
 }
 .text-body{
@@ -520,7 +521,7 @@ color: rgb(27, 11, 11);
 }
 
 .card-img-top{
-    border: 2px solid red;
+    /* border: 2px solid red; */
     border-radius: 5px;
 }
 
@@ -530,6 +531,12 @@ color: rgb(27, 11, 11);
 /*********************Non-technical************/
 .non-tech{
     width: 90%;
+    margin: auto;
+    display: flex;
+}
+.non-tech video{
+    width: 400px;
+    height: auto;
     margin: auto;
     display: flex;
 }
@@ -1781,6 +1788,9 @@ box-shadow: 10px 2px 36px 4px #272f20;
 }
 @media only screen and (max-width:438px)
 {
+    .non-tech video{
+        width: 100%;
+    }
     .multiple-cards{
         flex-direction: column;
     }
