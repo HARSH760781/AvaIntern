@@ -253,7 +253,7 @@ app.post("/contact", (req, res) => {
       res.status(200).render("contact");
     })
     .catch((err) => {
-      res.send('<script>alert("Enter a valid  Information");</script>');
+      res.send('<script>alert("Please try again after sometime");</script>');
     });
 });
 app.post("/signup", (req, res) => {
