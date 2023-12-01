@@ -77,6 +77,11 @@
     box-shadow: 2px 3px 8px 1px;
 
 }
+.contact_number{
+    font-size: 100%;
+    width: fit-content;
+    margin: auto;
+}
 .accordion-button:not(.collapsed) {
 background-color: white;
 }
@@ -824,6 +829,7 @@ margin: 5% auto;
 
         /* height: 105%; */
     }
+    
     .address{
         width: 45%;
         text-align: center;

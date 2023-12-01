@@ -249,7 +249,7 @@ app.post("/contact", (req, res) => {
   myData
     .save()
     .then(() => {
-      console.log(myData);
+      // console.log(myData);
       res.status(200).render("contact");
     })
     .catch((err) => {
