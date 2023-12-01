@@ -1794,6 +1794,9 @@ box-shadow: 10px 2px 36px 4px #272f20;
 }
 @media only screen and (max-width:438px)
 {
+    .textarea{
+        width: 70vw;
+    }
     .non-tech video{
         width: 100%;
     }
