@@ -103,12 +103,6 @@ const contactSchema = new mongoose.Schema({
     unique: true,
     lowercase: true,
     trim: true,
-    // validate: {
-    //   validator: function (v) {
-    //     return /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/.test(v);
-    //   },
-    //   message: "Please enter a valid email address",
-    // },
   },
   mobile: {
     type: Number,
@@ -171,6 +165,9 @@ app.get("/course/ds", (req, res) => {
 });
 app.get("/course/cad", (req, res) => {
   res.render("cad");
+});
+app.get("/course/da", (req, res) => {
+  res.render("da");
 });
 app.get("/course/bda", (req, res) => {
   res.render("bda");
