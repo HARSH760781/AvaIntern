@@ -181,7 +181,9 @@ overflow: hidden;
     position: absolute;
     width: 95%;
     height: 100%;
+    margin: auto;
     display: flex;
+    justify-content: center;
     transition: left 0.5s;
   }
   
@@ -194,7 +196,8 @@ overflow: hidden;
   }
   
   .slide img,.slide-1 img {
-    width: 100%;
+    width: 65%;
+    margin: auto;
     height: auto;
     /* object-fit: cover; */
   }
@@ -702,7 +705,7 @@ color: rgb(27, 11, 11);
     padding: 15px 0;
     text-decoration: none;
     color: black;
-    font-size: 20px;
+    font-size: 15px;
 }
 .dropdown-1 .dropdown-content-1 a:hover{
     transform: scale(1.2,1.2);
