@@ -178,6 +178,9 @@ app.get("/course/bde", (req, res) => {
 app.get("/course/bda", (req, res) => {
   res.render("bda");
 });
+app.get("/course/embedded-system", (req, res) => {
+  res.render("embedded");
+});
 app.get("/course/technical", (req, res) => {
   res.render("technical");
 });
@@ -216,6 +219,12 @@ app.get("/contact", (req, res) => {
 });
 app.get("/course/vlsi", (req, res) => {
   res.render("vlsi");
+});
+app.get("/course/cloud", (req, res) => {
+  res.render("cloud");
+});
+app.get("/course/system-testing", (req, res) => {
+  res.render("system");
 });
 app.get("/signup", (req, res) => {
   res.render("signup");
