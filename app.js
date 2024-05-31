@@ -10,6 +10,7 @@ var favicon = require("serve-favicon");
 var mongoose = require("mongoose");
 const flash = require("connect-flash");
 const { log } = require("console");
+const nodemailer = require("nodemailer");
 const username = process.env.MONGODB_USERNAME;
 const password = process.env.MONGODB_PASSWORD;
 const hostname = "cluster0.hvg2loc.mongodb.net";
@@ -34,7 +35,6 @@ const courseScheme = new mongoose.Schema({
   email: {
     type: String,
     required: true,
-    unique: true,
     lowercase: true,
     trim: true,
   },
@@ -230,14 +230,118 @@ app.get("*", (req, res) => {
   res.status(404).render("error404");
 });
 
-app.post("/thanku", (req, res) => {
+app.post("/form-submit", (req, res) => {
   var myData = new Course(req.body);
+  const { fullname, email, course, mobile, college } = myData;
   myData
     .save()
     .then(() => {
       res.status(200).render("thanku");
+
+      const transporter = nodemailer.createTransport({
+        service: "gmail",
+        auth: {
+          user: "support@avaintern.com",
+          pass: "djru ohgk ewvh qpqb",
+        },
+      });
+      const mailContent = `
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        .header {
+            font-size: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .content {
+            margin-bottom: 20px;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .details {
+            margin-bottom: 10px;
+        }
+        ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <p>Dear ${fullname},</p>
+            <p>We are thrilled to welcome you to Avaintern Edutech Pvt Ltd. Thank you for registering with us. Your account has been successfully created, and you are now a part of our community.</p>
+        </div>
+        <div class="content">
+            <div class="details">
+                <p><strong>Name:</strong> ${fullname}</p>
+                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Mobile:</strong> ${mobile}</p>
+                <p><strong>College:</strong> ${college}</p>
+                <p><strong>Course:</strong> ${course}</p>
+            </div>
+            <p>To get started, please visit our website page. Once visited, you can explore all the features and benefits we offer, including:</p>
+            <ul>
+                <li>Live Session</li>
+                <li>LMS access</li>
+                <li>Certification</li>
+                <li>Placement assistance</li>
+            </ul>
+            <p>If you have any questions or need assistance, our support team is here to help.</p>
+            <p>You can reach us at <a href="mailto:support@avaintern.com">support@avaintern.com</a> or contact us at 9606670754.</p>
+        </div>
+        <div class="footer">
+            <p>Best regards,</p>
+            <p>The Avaintern Team</p>
+        </div>
+    </div>
+</body>
+</html>
+`;
+
+      // Email content
+      const mailOptions = {
+        from: '"Support Team" <support@avaintern.com>',
+        to: [email, "avaintern2023@gmail.com"].join(","),
+        subject: "Welcome to Avaintern Edutech Pvt Ltd!",
+        html: mailContent,
+        headers: {
+          "Content-Type": "text/html",
+        },
+      };
+
+      // Send email
+      transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+          console.error("Error sending email:", error);
+          res.status(500).send("Error sending email");
+        } else {
+          console.log("Email sent:", info.response);
+          res.status(200).send("Email sent successfully");
+        }
+      });
     })
-    .catch(() => {
+    .catch((err) => {
+      console.error("Error saving data:", err);
       res.status(404).render("error");
     });
 });

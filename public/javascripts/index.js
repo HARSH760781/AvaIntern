@@ -236,3 +236,47 @@ rightButton.addEventListener("click", () => {
     }, 500);
   }
 });
+
+// ----------------------------------
+document.addEventListener("DOMContentLoaded", function () {
+  var videos = document.querySelectorAll(".video-iframe-review");
+  var videoWrappers = document.querySelectorAll(".video-wrapper");
+  var playPauseButton = document.getElementById("play-pause-button");
+  var prevButton = document.getElementById("prev-button");
+  var nextButton = document.getElementById("next-button");
+  var currentVideoIndex = 0;
+
+  playPauseButton.addEventListener("click", togglePlayPause);
+  prevButton.addEventListener("click", playPreviousVideo);
+  nextButton.addEventListener("click", playNextVideo);
+
+  function togglePlayPause() {
+    var video = videos[currentVideoIndex];
+    if (video.paused) {
+      video.play();
+      playPauseButton.textContent = "Pause";
+    } else {
+      video.pause();
+      playPauseButton.textContent = "Play";
+    }
+  }
+
+  function playNextVideo() {
+    videos[currentVideoIndex].pause();
+    videoWrappers[currentVideoIndex].classList.remove("active");
+    currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+    videoWrappers[currentVideoIndex].classList.add("active");
+    playPauseButton.textContent = "Play"; // Reset play button text
+  }
+
+  function playPreviousVideo() {
+    videos[currentVideoIndex].pause();
+    videoWrappers[currentVideoIndex].classList.remove("active");
+    currentVideoIndex = (currentVideoIndex - 1 + videos.length) % videos.length;
+    videoWrappers[currentVideoIndex].classList.add("active");
+    playPauseButton.textContent = "Play"; // Reset play button text
+  }
+
+  // Initially display the first video
+  videoWrappers[currentVideoIndex].classList.add("active");
+});
