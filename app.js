@@ -16,6 +16,7 @@ const password = process.env.MONGODB_PASSWORD;
 const hostname = "cluster0.hvg2loc.mongodb.net";
 const databaseName = "details";
 const db = `mongodb+srv://${username}:${password}@${hostname}/${databaseName}`;
+console.log(db);
 mongoose
   .connect(db, {
     useNewUrlParser: true,
@@ -359,6 +360,7 @@ app.post("/form-submit", (req, res) => {
     });
 });
 app.post("/contact", (req, res) => {
+  console.log("Hello");
   var myData = new Contact(req.body);
   console.log(myData);
   myData
@@ -368,6 +370,7 @@ app.post("/contact", (req, res) => {
       res.status(200).render("contact");
     })
     .catch((err) => {
+      console.log(err);
       res.send('<script>alert("Please try again after sometime");</script>');
     });
 });
