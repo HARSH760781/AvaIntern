@@ -244,6 +244,7 @@ app.get("*", (req, res) => {
 
 app.post("/form-submit", (req, res) => {
   var myData = new Course(req.body);
+  console.log(myData);
   const { fullname, email, course, mobile, college } = myData;
   myData
     .save()
