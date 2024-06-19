@@ -360,6 +360,7 @@ app.post("/form-submit", (req, res) => {
 });
 app.post("/contact", (req, res) => {
   var myData = new Contact(req.body);
+  console.log(myData);
   myData
     .save()
     .then(() => {
