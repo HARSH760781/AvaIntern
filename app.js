@@ -14,7 +14,9 @@ const nodemailer = require("nodemailer");
 const username = process.env.MONGODB_USERNAME;
 const password = process.env.MONGODB_PASSWORD;
 const hostname = "cluster0.hvg2loc.mongodb.net";
-const db = `mongodb+srv://${username}:${password}@${hostname}/details?retryWrites=true&w=majority&appName=Cluster0`;
+const databaseName = "details";
+// const db = `mongodb+srv://${username}:${password}@${hostname}/${databaseName}`;
+const db = `mongodb+srv://avaintern2023:Intern2023@cluster0.hvg2loc.mongodb.net/details?retryWrites=true&w=majority&appName=Cluster0`;
 // console.log(db);
 mongoose
   .connect(db, {
@@ -361,7 +363,7 @@ app.post("/form-submit", (req, res) => {
 app.post("/contact", (req, res) => {
   // console.log("Hello");
   var myData = new Contact(req.body);
-  // console.log(myData);
+  console.log(myData);
   myData
     .save()
     .then(() => {
