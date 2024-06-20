@@ -15,7 +15,8 @@ const username = process.env.MONGODB_USERNAME;
 const password = process.env.MONGODB_PASSWORD;
 const hostname = "cluster0.hvg2loc.mongodb.net";
 const databaseName = "details";
-const db = `mongodb+srv://${username}:${password}@${hostname}/${databaseName}`;
+// const db = `mongodb+srv://${username}:${password}@${hostname}/${databaseName}`;
+const db = `mongodb+srv://avaintern2023:Intern2023@cluster0.hvg2loc.mongodb.net/details?retryWrites=true&w=majority&appName=Cluster0`;
 console.log(db);
 mongoose
   .connect(db, {
