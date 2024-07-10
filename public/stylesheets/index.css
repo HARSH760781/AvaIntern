@@ -1343,7 +1343,7 @@ box-shadow: 5px 10px 10px 10px;
 
 }
 .navbar{
-    width: 100%;
+    width: 100vw;
     background: white;
     position: fic;
     position: fixed;
