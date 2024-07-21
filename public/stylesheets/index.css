@@ -17,6 +17,8 @@
 .graphs img{
     width: 100%;
     margin: auto;
+    display: flex;
+    justify-content: center;
 }
 #form h2{
     font-weight: bolder;
