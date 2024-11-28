@@ -1,16 +1,15 @@
 {
   "version": 2,
-  "name": "course",
   "builds": [
     {
-      "src": "app.js",
+      "src": "./app.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/app.js"
+      "dest": "/"
     }
   ]
 }
